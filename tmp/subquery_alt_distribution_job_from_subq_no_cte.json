@@ -1,0 +1,578 @@
+{
+  "database": "athena_measurement_job_from_subq_no_cte",
+  "queries_dir": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir",
+  "schema_json": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/benchmark/benchmarks/job/job.dbschema.json",
+  "limit": 0,
+  "statement_timeout_ms": 3000,
+  "isolated_per_query": true,
+  "summary": {
+    "query_count": 26,
+    "error_count": 26,
+    "queries_with_subquery_alternatives": 0,
+    "total_alternatives_per_query_histogram": {
+      "0": 26
+    },
+    "slot_count_per_query_histogram": {
+      "0": 26
+    },
+    "alternatives_per_slot_histogram": {},
+    "syntax_bucket_counts": {
+      "join_subq": 26
+    },
+    "syntax_bucket_with_alternatives": {},
+    "max_total_alternatives_per_query": 0,
+    "max_slot_count_per_query": 0
+  },
+  "queries": {
+    "0": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/10897.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column p.name does not exist"
+      ]
+    },
+    "1": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/11544.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "TIMEOUT: client-side timeout expired"
+      ]
+    },
+    "2": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/14254.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column c.kind does not exist"
+      ]
+    },
+    "3": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/15232.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "TIMEOUT: client-side timeout expired"
+      ]
+    },
+    "4": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/26472.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  function instr(text, unknown) does not exist",
+        "ERROR:  syntax error at or near \"This\""
+      ]
+    },
+    "5": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/27164.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column c.kind does not exist",
+        "ERROR:  syntax error at or near \"This\""
+      ]
+    },
+    "6": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/27232.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column \"rating\" does not exist",
+        "ERROR:  syntax error at or near \"###\""
+      ]
+    },
+    "7": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/27406.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  table name \"ci\" specified more than once"
+      ]
+    },
+    "8": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/29918.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  missing FROM-clause entry for table \"comp\""
+      ]
+    },
+    "9": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/5021.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  missing FROM-clause entry for table \"c\""
+      ]
+    },
+    "10": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/5174.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column kt.kind does not exist"
+      ]
+    },
+    "11": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/5288.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  missing FROM-clause entry for table \"tc\""
+      ]
+    },
+    "12": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/5374.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column mk.keyword does not exist"
+      ]
+    },
+    "13": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/5998.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column p.id does not exist"
+      ]
+    },
+    "14": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/6031.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  missing FROM-clause entry for table \"tc\""
+      ]
+    },
+    "15": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/6604.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  missing FROM-clause entry for table \"m\""
+      ]
+    },
+    "16": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/7007.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column y.year does not exist"
+      ]
+    },
+    "17": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/7185.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column \"budget\" does not exist"
+      ]
+    },
+    "18": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/7412.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column c.type does not exist"
+      ]
+    },
+    "19": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/8684.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  function pg_catalog.extract(unknown, integer) does not exist"
+      ]
+    },
+    "20": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/8729.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "TIMEOUT: client-side timeout expired"
+      ]
+    },
+    "21": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/8993.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  function pg_catalog.extract(unknown, integer) does not exist"
+      ]
+    },
+    "22": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/9104.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column c.kind does not exist"
+      ]
+    },
+    "23": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/9269.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column mi.info_length does not exist"
+      ]
+    },
+    "24": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/9476.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  column k.movie_id does not exist"
+      ]
+    },
+    "25": {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir/9702.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 0,
+      "alternatives_per_slot": {},
+      "total_alternatives": 0,
+      "max_alternatives_per_slot": 0,
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "error": true,
+      "error_lines": [
+        "ERROR:  function group_concat(text) does not exist"
+      ]
+    }
+  },
+  "psql_exit_code": 0
+}

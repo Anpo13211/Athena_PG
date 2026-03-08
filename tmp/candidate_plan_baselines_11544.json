@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "query_count": 1,
+    "planner_cost_min_accuracy": 0.0,
+    "structure_first_accuracy": 0.0,
+    "runtime_comparable_queries": 1,
+    "planner_cost_min_avg_runtime_ms": 0.063,
+    "structure_first_avg_runtime_ms": 0.063,
+    "oracle_avg_runtime_ms": 0.06
+  },
+  "queries": [
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/11544.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 0,
+      "oracle_runtime_ms": 0.06,
+      "planner_runtime_ms": 0.063,
+      "heuristic_runtime_ms": 0.063
+    }
+  ]
+}

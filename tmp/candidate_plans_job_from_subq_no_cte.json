@@ -1,0 +1,570 @@
+[
+  {
+    "sql": "SELECT\n    t.id AS title_id,\n    t.title,\n    t.production_year,\n    tn.name AS title_name,\n    m.name AS company_name,\n    a.name AS actor_name\nFROM\n    title t\nJOIN\n    aka_title at ON t.id = at.movie_id\nJOIN\n    movie_companies mc ON t.id = mc.movie_id\nJOIN\n    company_name m ON mc.company_id = m.id\nJOIN\n    complete_cast cc ON t.id = cc.movie_id\nJOIN\n    cast_info ci ON cc.subject_id = ci.person_id\nJOIN\n    aka_name a ON ci.person_id = a.person_id\nJOIN\n    (SELECT DISTINCT name, imdb_index FROM char_name) tn ON t.imdb_index = tn.imdb_index\nWHERE\n    t.production_year >= 2000\nORDER BY\n    t.production_year DESC, t.title",
+    "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/11544.sql",
+    "db_name": "athena_oracle_eval_job_from_subq_no_cte",
+    "card_tb": "",
+    "ndv": "",
+    "main_value": "",
+    "min_max": "",
+    "hists": "",
+    "candidate_plans": [
+      {
+        "candidate_id": 0,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), a), char_name)",
+        "scan_methods": [
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "m: Seq Scan",
+          "cc: Seq Scan",
+          "ci: Seq Scan",
+          "a: Seq Scan",
+          "char_name: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), a), char_name)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), a)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), m)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 2,
+        "bound_candidate_id": 0,
+        "execution_time_ms": 0.057
+      },
+      {
+        "candidate_id": 1,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(char_name, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), a))",
+        "scan_methods": [
+          "char_name: Seq Scan",
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "m: Seq Scan",
+          "cc: Seq Scan",
+          "ci: Seq Scan",
+          "a: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(char_name, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), a))",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), a)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), m)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 3,
+        "bound_candidate_id": 2,
+        "execution_time_ms": 0.059
+      },
+      {
+        "candidate_id": 2,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), char_name), a)",
+        "scan_methods": [
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "m: Seq Scan",
+          "cc: Seq Scan",
+          "ci: Seq Scan",
+          "char_name: Seq Scan",
+          "a: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), char_name), a)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), char_name)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), m)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 4,
+        "bound_candidate_id": 4,
+        "execution_time_ms": 0.072
+      },
+      {
+        "candidate_id": 3,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(a, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), char_name))",
+        "scan_methods": [
+          "a: Seq Scan",
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "m: Seq Scan",
+          "cc: Seq Scan",
+          "ci: Seq Scan",
+          "char_name: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(a, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), char_name))",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci), char_name)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), ci)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), m)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 5,
+        "bound_candidate_id": 6,
+        "execution_time_ms": 0.063
+      },
+      {
+        "candidate_id": 4,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a), char_name), ci)",
+        "scan_methods": [
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "m: Seq Scan",
+          "cc: Seq Scan",
+          "a: Seq Scan",
+          "char_name: Seq Scan",
+          "ci: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a), char_name), ci)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a), char_name)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), m)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 6,
+        "bound_candidate_id": 8,
+        "execution_time_ms": 0.065
+      },
+      {
+        "candidate_id": 5,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(ci, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a), char_name))",
+        "scan_methods": [
+          "ci: Seq Scan",
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "m: Seq Scan",
+          "cc: Seq Scan",
+          "a: Seq Scan",
+          "char_name: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(ci, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a), char_name))",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a), char_name)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc), a)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), m), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), m)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 7,
+        "bound_candidate_id": 10,
+        "execution_time_ms": 0.063
+      },
+      {
+        "candidate_id": 6,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a), char_name), m)",
+        "scan_methods": [
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "cc: Seq Scan",
+          "ci: Seq Scan",
+          "a: Seq Scan",
+          "char_name: Seq Scan",
+          "m: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a), char_name), m)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a), char_name)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 8,
+        "bound_candidate_id": 12,
+        "execution_time_ms": 0.073
+      },
+      {
+        "candidate_id": 7,
+        "startup_cost": 0.01,
+        "total_cost": 0.1,
+        "est_rows": 1,
+        "plan_width": 136,
+        "root_join_tree": "Nested Loop(m, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a), char_name))",
+        "scan_methods": [
+          "m: Seq Scan",
+          "t: Seq Scan",
+          "at: Seq Scan",
+          "mc: Seq Scan",
+          "cc: Seq Scan",
+          "ci: Seq Scan",
+          "a: Seq Scan",
+          "char_name: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(m, Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a), char_name))",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a), char_name)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci), a)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc), ci)",
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(t, at), mc), cc)",
+          "Nested Loop: Nested Loop(Nested Loop(t, at), mc)",
+          "Nested Loop: Nested Loop(t, at)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.1,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 9,
+        "bound_candidate_id": 14,
+        "execution_time_ms": 0.061
+      }
+    ],
+    "best_candidate_idx": 0,
+    "best_candidate_id": 0,
+    "planner_min_candidate_id": 0,
+    "oracle_candidate_id": 0,
+    "default_execution_time_ms": 0.079,
+    "planner_min_execution_time_ms": 0.059,
+    "root_candidate_count": 24,
+    "bound_candidate_count": 24
+  },
+  {
+    "sql": "SELECT \n    a.name AS actor_name,\n    t.title AS movie_title,\n    t.production_year,\n    c.number_of_actors\nFROM \n    aka_name a\nJOIN \n    cast_info ci ON a.person_id = ci.person_id\nJOIN \n    title t ON ci.movie_id = t.id\nJOIN \n    (SELECT movie_id, COUNT(*) AS number_of_actors \n     FROM cast_info \n     GROUP BY movie_id) c ON t.id = c.movie_id\nWHERE \n    t.production_year = 2020\nORDER BY \n    a.name",
+    "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/15232.sql",
+    "db_name": "athena_oracle_eval_job_from_subq_no_cte",
+    "card_tb": "",
+    "ndv": "",
+    "main_value": "",
+    "min_max": "",
+    "hists": "",
+    "candidate_plans": [
+      {
+        "candidate_id": 0,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(Nested Loop(Nested Loop(a, ci), t), cast_info)",
+        "scan_methods": [
+          "a: Seq Scan",
+          "ci: Seq Scan",
+          "t: Seq Scan",
+          "cast_info: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(a, ci), t), cast_info)",
+          "Nested Loop: Nested Loop(Nested Loop(a, ci), t)",
+          "Nested Loop: Nested Loop(a, ci)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 2,
+        "bound_candidate_id": 0,
+        "execution_time_ms": 0.05
+      },
+      {
+        "candidate_id": 1,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(cast_info, Nested Loop(Nested Loop(a, ci), t))",
+        "scan_methods": [
+          "cast_info: Seq Scan",
+          "a: Seq Scan",
+          "ci: Seq Scan",
+          "t: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(cast_info, Nested Loop(Nested Loop(a, ci), t))",
+          "Nested Loop: Nested Loop(Nested Loop(a, ci), t)",
+          "Nested Loop: Nested Loop(a, ci)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 3,
+        "bound_candidate_id": 2,
+        "execution_time_ms": 0.048
+      },
+      {
+        "candidate_id": 2,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(Nested Loop(Nested Loop(a, ci), cast_info), t)",
+        "scan_methods": [
+          "a: Seq Scan",
+          "ci: Seq Scan",
+          "cast_info: Seq Scan",
+          "t: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(a, ci), cast_info), t)",
+          "Nested Loop: Nested Loop(Nested Loop(a, ci), cast_info)",
+          "Nested Loop: Nested Loop(a, ci)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 4,
+        "bound_candidate_id": 4,
+        "execution_time_ms": 0.046
+      },
+      {
+        "candidate_id": 3,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(t, Nested Loop(Nested Loop(a, ci), cast_info))",
+        "scan_methods": [
+          "t: Seq Scan",
+          "a: Seq Scan",
+          "ci: Seq Scan",
+          "cast_info: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(t, Nested Loop(Nested Loop(a, ci), cast_info))",
+          "Nested Loop: Nested Loop(Nested Loop(a, ci), cast_info)",
+          "Nested Loop: Nested Loop(a, ci)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 5,
+        "bound_candidate_id": 6,
+        "execution_time_ms": 0.05
+      },
+      {
+        "candidate_id": 4,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(Nested Loop(Nested Loop(ci, t), cast_info), a)",
+        "scan_methods": [
+          "ci: Seq Scan",
+          "t: Seq Scan",
+          "cast_info: Seq Scan",
+          "a: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(Nested Loop(ci, t), cast_info), a)",
+          "Nested Loop: Nested Loop(Nested Loop(ci, t), cast_info)",
+          "Nested Loop: Nested Loop(ci, t)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 6,
+        "bound_candidate_id": 8,
+        "execution_time_ms": 0.054
+      },
+      {
+        "candidate_id": 5,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(a, Nested Loop(Nested Loop(ci, t), cast_info))",
+        "scan_methods": [
+          "a: Seq Scan",
+          "ci: Seq Scan",
+          "t: Seq Scan",
+          "cast_info: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(a, Nested Loop(Nested Loop(ci, t), cast_info))",
+          "Nested Loop: Nested Loop(Nested Loop(ci, t), cast_info)",
+          "Nested Loop: Nested Loop(ci, t)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 7,
+        "bound_candidate_id": 10,
+        "execution_time_ms": 0.047
+      },
+      {
+        "candidate_id": 6,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(Nested Loop(a, ci), Nested Loop(t, cast_info))",
+        "scan_methods": [
+          "a: Seq Scan",
+          "ci: Seq Scan",
+          "t: Seq Scan",
+          "cast_info: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(a, ci), Nested Loop(t, cast_info))",
+          "Nested Loop: Nested Loop(a, ci)",
+          "Nested Loop: Nested Loop(t, cast_info)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 8,
+        "bound_candidate_id": 12,
+        "execution_time_ms": 0.049
+      },
+      {
+        "candidate_id": 7,
+        "startup_cost": 0.01,
+        "total_cost": 0.06,
+        "est_rows": 1,
+        "plan_width": 76,
+        "root_join_tree": "Nested Loop(Nested Loop(t, cast_info), Nested Loop(a, ci))",
+        "scan_methods": [
+          "t: Seq Scan",
+          "cast_info: Seq Scan",
+          "a: Seq Scan",
+          "ci: Seq Scan"
+        ],
+        "join_methods": [
+          "Nested Loop: Nested Loop(Nested Loop(t, cast_info), Nested Loop(a, ci))",
+          "Nested Loop: Nested Loop(t, cast_info)",
+          "Nested Loop: Nested Loop(a, ci)"
+        ],
+        "subqueries": [],
+        "other_operators": [
+          "Aggregate"
+        ],
+        "bindings": "[slot0->alt0]",
+        "planner_candidate_cost": 0.06,
+        "planner_candidate_rows": 1.0,
+        "skeleton_candidate_id": 9,
+        "bound_candidate_id": 14,
+        "execution_time_ms": 0.054
+      }
+    ],
+    "best_candidate_idx": 2,
+    "best_candidate_id": 2,
+    "planner_min_candidate_id": 0,
+    "oracle_candidate_id": 2,
+    "default_execution_time_ms": 0.077,
+    "planner_min_execution_time_ms": 0.06,
+    "root_candidate_count": 8,
+    "bound_candidate_count": 8
+  }
+]

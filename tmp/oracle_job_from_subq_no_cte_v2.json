@@ -1,0 +1,1287 @@
+{
+  "database": "athena_oracle_eval_job_from_subq_no_cte",
+  "queries_dir": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir",
+  "schema_json": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/benchmark/benchmarks/job/job.dbschema.json",
+  "statement_timeout_ms": 1000,
+  "max_oracle_candidates": 8,
+  "queries": [
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/10897.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column p.name does not exist",
+          "LINE 9:     p.name AS person_name,",
+          "            ^",
+          "HINT:  Perhaps you meant to reference the column \"a.name\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/11544.sql",
+      "default_runtime": {
+        "returncode": 0,
+        "stderr": [],
+        "planning_time_ms": 1.574,
+        "execution_time_ms": 0.086
+      },
+      "root_candidate_count": 24,
+      "bound_candidate_count": 24,
+      "bound_candidates": [
+        {
+          "idx": 0,
+          "bound_candidate_id": 0,
+          "skeleton_candidate_id": 2,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 1,
+          "bound_candidate_id": 2,
+          "skeleton_candidate_id": 3,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 2,
+          "bound_candidate_id": 4,
+          "skeleton_candidate_id": 4,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 3,
+          "bound_candidate_id": 6,
+          "skeleton_candidate_id": 5,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 4,
+          "bound_candidate_id": 8,
+          "skeleton_candidate_id": 6,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 5,
+          "bound_candidate_id": 10,
+          "skeleton_candidate_id": 7,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 6,
+          "bound_candidate_id": 12,
+          "skeleton_candidate_id": 8,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 7,
+          "bound_candidate_id": 14,
+          "skeleton_candidate_id": 9,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 8,
+          "bound_candidate_id": 16,
+          "skeleton_candidate_id": 10,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 9,
+          "bound_candidate_id": 18,
+          "skeleton_candidate_id": 11,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 10,
+          "bound_candidate_id": 20,
+          "skeleton_candidate_id": 12,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 11,
+          "bound_candidate_id": 22,
+          "skeleton_candidate_id": 13,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 12,
+          "bound_candidate_id": 24,
+          "skeleton_candidate_id": 14,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 13,
+          "bound_candidate_id": 26,
+          "skeleton_candidate_id": 15,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 14,
+          "bound_candidate_id": 28,
+          "skeleton_candidate_id": 16,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 15,
+          "bound_candidate_id": 30,
+          "skeleton_candidate_id": 17,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 16,
+          "bound_candidate_id": 32,
+          "skeleton_candidate_id": 18,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 17,
+          "bound_candidate_id": 34,
+          "skeleton_candidate_id": 19,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 18,
+          "bound_candidate_id": 36,
+          "skeleton_candidate_id": 20,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 19,
+          "bound_candidate_id": 38,
+          "skeleton_candidate_id": 21,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 20,
+          "bound_candidate_id": 40,
+          "skeleton_candidate_id": 22,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 21,
+          "bound_candidate_id": 42,
+          "skeleton_candidate_id": 23,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 22,
+          "bound_candidate_id": 44,
+          "skeleton_candidate_id": 24,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 23,
+          "bound_candidate_id": 46,
+          "skeleton_candidate_id": 25,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        }
+      ],
+      "default_runtime_success": true,
+      "bound_collection_success": true,
+      "oracle_eligible": true,
+      "planner_min_candidate_idx": 0,
+      "planner_min_runtime": {
+        "returncode": 0,
+        "stderr": [
+          "NOTICE:  Athena root candidate count: 24",
+          "NOTICE:  Athena forced bound candidate idx: 0"
+        ],
+        "planning_time_ms": 1.634,
+        "execution_time_ms": 0.063
+      },
+      "oracle_candidates_evaluated": [
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 0"
+          ],
+          "planning_time_ms": 1.587,
+          "execution_time_ms": 0.06,
+          "idx": 0,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 1"
+          ],
+          "planning_time_ms": 1.576,
+          "execution_time_ms": 0.058,
+          "idx": 1,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 2"
+          ],
+          "planning_time_ms": 1.614,
+          "execution_time_ms": 0.065,
+          "idx": 2,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 3"
+          ],
+          "planning_time_ms": 1.756,
+          "execution_time_ms": 0.072,
+          "idx": 3,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 4"
+          ],
+          "planning_time_ms": 1.581,
+          "execution_time_ms": 0.055,
+          "idx": 4,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 5"
+          ],
+          "planning_time_ms": 1.658,
+          "execution_time_ms": 0.061,
+          "idx": 5,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 6"
+          ],
+          "planning_time_ms": 1.601,
+          "execution_time_ms": 0.053,
+          "idx": 6,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 7"
+          ],
+          "planning_time_ms": 1.651,
+          "execution_time_ms": 0.061,
+          "idx": 7,
+          "planner_total_cost": 0.1
+        }
+      ],
+      "oracle_candidate_idx": 6,
+      "oracle_runtime": {
+        "returncode": 0,
+        "stderr": [
+          "NOTICE:  Athena root candidate count: 24",
+          "NOTICE:  Athena forced bound candidate idx: 6"
+        ],
+        "planning_time_ms": 1.601,
+        "execution_time_ms": 0.053,
+        "idx": 6,
+        "planner_total_cost": 0.1
+      },
+      "summary": {
+        "default_minus_oracle_ms": 0.032999999999999995,
+        "planner_min_minus_oracle_ms": 0.010000000000000002
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/14254.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column c.kind does not exist",
+          "LINE 4:     c.kind AS character_role,",
+          "            ^",
+          "HINT:  Perhaps you meant to reference the column \"c.id\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/15232.sql",
+      "default_runtime": {
+        "returncode": 0,
+        "stderr": [],
+        "planning_time_ms": 0.5,
+        "execution_time_ms": 0.069
+      },
+      "root_candidate_count": 8,
+      "bound_candidate_count": 8,
+      "bound_candidates": [
+        {
+          "idx": 0,
+          "bound_candidate_id": 0,
+          "skeleton_candidate_id": 2,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 1,
+          "bound_candidate_id": 2,
+          "skeleton_candidate_id": 3,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 2,
+          "bound_candidate_id": 4,
+          "skeleton_candidate_id": 4,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 3,
+          "bound_candidate_id": 6,
+          "skeleton_candidate_id": 5,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 4,
+          "bound_candidate_id": 8,
+          "skeleton_candidate_id": 6,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 5,
+          "bound_candidate_id": 10,
+          "skeleton_candidate_id": 7,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 6,
+          "bound_candidate_id": 12,
+          "skeleton_candidate_id": 8,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 7,
+          "bound_candidate_id": 14,
+          "skeleton_candidate_id": 9,
+          "total_cost": 0.06,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        }
+      ],
+      "default_runtime_success": true,
+      "bound_collection_success": true,
+      "oracle_eligible": true,
+      "planner_min_candidate_idx": 0,
+      "planner_min_runtime": {
+        "returncode": 0,
+        "stderr": [
+          "NOTICE:  Athena root candidate count: 8",
+          "NOTICE:  Athena forced bound candidate idx: 0"
+        ],
+        "planning_time_ms": 0.45,
+        "execution_time_ms": 0.048
+      },
+      "oracle_candidates_evaluated": [
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 0"
+          ],
+          "planning_time_ms": 0.491,
+          "execution_time_ms": 0.05,
+          "idx": 0,
+          "planner_total_cost": 0.06
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 1"
+          ],
+          "planning_time_ms": 0.447,
+          "execution_time_ms": 0.047,
+          "idx": 1,
+          "planner_total_cost": 0.06
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 2"
+          ],
+          "planning_time_ms": 0.477,
+          "execution_time_ms": 0.052,
+          "idx": 2,
+          "planner_total_cost": 0.06
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 3"
+          ],
+          "planning_time_ms": 0.474,
+          "execution_time_ms": 0.047,
+          "idx": 3,
+          "planner_total_cost": 0.06
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 4"
+          ],
+          "planning_time_ms": 0.495,
+          "execution_time_ms": 0.051,
+          "idx": 4,
+          "planner_total_cost": 0.06
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 5"
+          ],
+          "planning_time_ms": 0.461,
+          "execution_time_ms": 0.051,
+          "idx": 5,
+          "planner_total_cost": 0.06
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 6"
+          ],
+          "planning_time_ms": 0.436,
+          "execution_time_ms": 0.048,
+          "idx": 6,
+          "planner_total_cost": 0.06
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 8",
+            "NOTICE:  Athena forced bound candidate idx: 7"
+          ],
+          "planning_time_ms": 0.426,
+          "execution_time_ms": 0.044,
+          "idx": 7,
+          "planner_total_cost": 0.06
+        }
+      ],
+      "oracle_candidate_idx": 7,
+      "oracle_runtime": {
+        "returncode": 0,
+        "stderr": [
+          "NOTICE:  Athena root candidate count: 8",
+          "NOTICE:  Athena forced bound candidate idx: 7"
+        ],
+        "planning_time_ms": 0.426,
+        "execution_time_ms": 0.044,
+        "idx": 7,
+        "planner_total_cost": 0.06
+      },
+      "summary": {
+        "default_minus_oracle_ms": 0.02500000000000001,
+        "planner_min_minus_oracle_ms": 0.0040000000000000036
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/26472.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  function instr(text, unknown) does not exist",
+          "LINE 29:          SUBSTR(name, INSTR(name, ' ') + 1) AS last_name",
+          "                               ^",
+          "HINT:  No function matches the given name and argument types. You might need to add explicit type casts."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/27164.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column c.kind does not exist",
+          "LINE 4:     c.kind AS role_type,",
+          "            ^",
+          "HINT:  Perhaps you meant to reference the column \"c.id\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/27232.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column \"rating\" does not exist",
+          "LINE 25:     (SELECT movie_id, AVG(rating) AS rating FROM movie_info ...",
+          "                                   ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/27406.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  table name \"ci\" specified more than once"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/29918.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  missing FROM-clause entry for table \"comp\"",
+          "LINE 9:     COUNT(DISTINCT comp.id) AS company_count,",
+          "                           ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/5021.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  missing FROM-clause entry for table \"c\"",
+          "LINE 4:     c.kind AS cast_type,",
+          "            ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/5174.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column kt.kind does not exist",
+          "LINE 24:          kt.kind ",
+          "                  ^",
+          "HINT:  Perhaps you meant to reference the column \"kt.id\" or the column \"ci.kind\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/5288.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  missing FROM-clause entry for table \"tc\"",
+          "LINE 5:     tc.kind AS company_type,",
+          "            ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/5374.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column mk.keyword does not exist",
+          "LINE 5:     COUNT(DISTINCT mk.keyword) AS keyword_count,",
+          "                           ^",
+          "HINT:  Perhaps you meant to reference the column \"mk.keyword_id\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/5998.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column p.id does not exist",
+          "LINE 8:     COUNT(DISTINCT p.id) AS distinct_person_info_count,",
+          "                           ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/6031.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  missing FROM-clause entry for table \"tc\"",
+          "LINE 4:     tc.kind AS company_type,",
+          "            ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/6604.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  missing FROM-clause entry for table \"m\"",
+          "LINE 5:     COUNT(DISTINCT m.id) AS movie_count,",
+          "                           ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/7007.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column y.year does not exist",
+          "LINE 16: ... WHERE title IS NOT NULL) AS y ON t.production_year = y.year",
+          "                                                                  ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/7185.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column \"budget\" does not exist",
+          "LINE 30:     (SELECT movie_id, AVG(budget) as salary FROM movie_info ...",
+          "                                   ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/7412.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column c.type does not exist",
+          "LINE 6:     c.type AS company_type",
+          "            ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/8684.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  function pg_catalog.extract(unknown, integer) does not exist",
+          "LINE 28:     (SELECT DISTINCT EXTRACT(YEAR FROM production_year) AS y...",
+          "                              ^",
+          "HINT:  No function matches the given name and argument types. You might need to add explicit type casts."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/8729.sql",
+      "default_runtime": {
+        "returncode": 0,
+        "stderr": [],
+        "planning_time_ms": 1.371,
+        "execution_time_ms": 0.092
+      },
+      "root_candidate_count": 14,
+      "bound_candidate_count": 0,
+      "bound_candidates": [],
+      "default_runtime_success": true,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/8993.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  function pg_catalog.extract(unknown, integer) does not exist",
+          "LINE 20:         EXTRACT(YEAR FROM production_year) AS year_of_releas...",
+          "                 ^",
+          "HINT:  No function matches the given name and argument types. You might need to add explicit type casts."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/9104.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column c.kind does not exist",
+          "LINE 4:     c.kind AS cast_type,",
+          "            ^",
+          "HINT:  Perhaps you meant to reference the column \"c.id\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/9269.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column mi.info_length does not exist",
+          "LINE 7:     AVG(mi.info_length) AS average_info_length",
+          "                ^",
+          "HINT:  Perhaps you meant to reference the column \"pc.info_length\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/9476.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column k.movie_id does not exist",
+          "LINE 22:     keyword k ON t.id = k.movie_id ",
+          "                                 ^"
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/9702.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  function group_concat(text) does not exist",
+          "LINE 6:     GROUP_CONCAT(DISTINCT k.keyword) AS keywords,",
+          "            ^",
+          "HINT:  No function matches the given name and argument types. You might need to add explicit type casts."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "default_runtime_success": false,
+      "bound_collection_success": false,
+      "oracle_eligible": false,
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "query_count": 26,
+    "default_runtime_success_count": 3,
+    "bound_collection_success_count": 2,
+    "oracle_eligible_count": 2,
+    "oracle_better_than_default_count": 2,
+    "default_not_worse_than_oracle_count": 0,
+    "planner_min_equal_oracle_count": 0
+  }
+}

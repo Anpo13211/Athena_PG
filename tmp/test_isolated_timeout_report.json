@@ -1,0 +1,54 @@
+{
+  "database": "athena_measurement_job_from_subq_no_cte",
+  "queries_dir": "/private/var/folders/3g/9zclrxbx451fplsjznq09x_40000gn/T/tmpe96ror2u",
+  "schema_json": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/benchmark/benchmarks/job/job.dbschema.json",
+  "limit": 1,
+  "statement_timeout_ms": 1000,
+  "isolated_per_query": true,
+  "summary": {
+    "query_count": 1,
+    "error_count": 0,
+    "queries_with_subquery_alternatives": 1,
+    "total_alternatives_per_query_histogram": {
+      "2": 1
+    },
+    "slot_count_per_query_histogram": {
+      "1": 1
+    },
+    "alternatives_per_slot_histogram": {
+      "2": 1
+    },
+    "syntax_bucket_counts": {
+      "join_subq": 1
+    },
+    "syntax_bucket_with_alternatives": {
+      "join_subq": 1
+    },
+    "max_total_alternatives_per_query": 2,
+    "max_slot_count_per_query": 1
+  },
+  "queries": {
+    "0": {
+      "path": "/var/folders/3g/9zclrxbx451fplsjznq09x_40000gn/T/tmpe96ror2u/11544.sql",
+      "flags": {
+        "from_subq": false,
+        "join_subq": true,
+        "cte": false,
+        "recursive_cte": false,
+        "exists": false,
+        "in_select": false
+      },
+      "slot_count": 1,
+      "alternatives_per_slot": {
+        "0": 2
+      },
+      "total_alternatives": 2,
+      "max_alternatives_per_slot": 2,
+      "root_candidate_count": 24,
+      "bound_candidate_count": 24,
+      "error": false,
+      "error_lines": []
+    }
+  },
+  "psql_exit_code": 0
+}

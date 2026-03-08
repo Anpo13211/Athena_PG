@@ -1,0 +1,44 @@
+{
+  "database": "athena_oracle_eval_smoke",
+  "queries_dir": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/job_queries_from_subq_no_cte_dir",
+  "schema_json": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/benchmark/benchmarks/job/job.dbschema.json",
+  "statement_timeout_ms": 1000,
+  "max_oracle_candidates": 0,
+  "queries": [
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/10897.sql",
+      "default_runtime": {
+        "returncode": 3,
+        "stderr": [
+          "ERROR:  column p.name does not exist",
+          "LINE 9:     p.name AS person_name,",
+          "            ^",
+          "HINT:  Perhaps you meant to reference the column \"a.name\"."
+        ],
+        "planning_time_ms": null,
+        "execution_time_ms": null
+      },
+      "root_candidate_count": null,
+      "bound_candidate_count": null,
+      "bound_candidates": [],
+      "planner_min_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      },
+      "oracle_runtime": {
+        "returncode": 1,
+        "stderr": [
+          "failed to collect bound candidates"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "query_count": 1,
+    "oracle_better_than_default_count": 0,
+    "default_not_worse_than_oracle_count": 0,
+    "planner_min_equal_oracle_count": 0
+  }
+}

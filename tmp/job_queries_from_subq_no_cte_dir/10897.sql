@@ -1,0 +1,1 @@
+/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/v1.0/job/queries_generated/10897.sql

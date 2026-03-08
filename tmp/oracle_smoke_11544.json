@@ -1,0 +1,303 @@
+{
+  "database": "athena_oracle_eval_smoke2",
+  "queries_dir": "/private/var/folders/3g/9zclrxbx451fplsjznq09x_40000gn/T/tmpkltn3svg",
+  "schema_json": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/SQLStorm/benchmark/benchmarks/job/job.dbschema.json",
+  "statement_timeout_ms": 1000,
+  "max_oracle_candidates": 5,
+  "queries": [
+    {
+      "path": "/private/var/folders/3g/9zclrxbx451fplsjznq09x_40000gn/T/tmpkltn3svg/11544.sql",
+      "default_runtime": {
+        "returncode": 0,
+        "stderr": [],
+        "planning_time_ms": 1.608,
+        "execution_time_ms": 0.091
+      },
+      "root_candidate_count": 24,
+      "bound_candidate_count": 24,
+      "bound_candidates": [
+        {
+          "idx": 0,
+          "bound_candidate_id": 0,
+          "skeleton_candidate_id": 2,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 1,
+          "bound_candidate_id": 2,
+          "skeleton_candidate_id": 3,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 2,
+          "bound_candidate_id": 4,
+          "skeleton_candidate_id": 4,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 3,
+          "bound_candidate_id": 6,
+          "skeleton_candidate_id": 5,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 4,
+          "bound_candidate_id": 8,
+          "skeleton_candidate_id": 6,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 5,
+          "bound_candidate_id": 10,
+          "skeleton_candidate_id": 7,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 6,
+          "bound_candidate_id": 12,
+          "skeleton_candidate_id": 8,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 7,
+          "bound_candidate_id": 14,
+          "skeleton_candidate_id": 9,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 8,
+          "bound_candidate_id": 16,
+          "skeleton_candidate_id": 10,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 9,
+          "bound_candidate_id": 18,
+          "skeleton_candidate_id": 11,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 10,
+          "bound_candidate_id": 20,
+          "skeleton_candidate_id": 12,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 11,
+          "bound_candidate_id": 22,
+          "skeleton_candidate_id": 13,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 12,
+          "bound_candidate_id": 24,
+          "skeleton_candidate_id": 14,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 13,
+          "bound_candidate_id": 26,
+          "skeleton_candidate_id": 15,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 14,
+          "bound_candidate_id": 28,
+          "skeleton_candidate_id": 16,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 15,
+          "bound_candidate_id": 30,
+          "skeleton_candidate_id": 17,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 16,
+          "bound_candidate_id": 32,
+          "skeleton_candidate_id": 18,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 17,
+          "bound_candidate_id": 34,
+          "skeleton_candidate_id": 19,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 18,
+          "bound_candidate_id": 36,
+          "skeleton_candidate_id": 20,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 19,
+          "bound_candidate_id": 38,
+          "skeleton_candidate_id": 21,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 20,
+          "bound_candidate_id": 40,
+          "skeleton_candidate_id": 22,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 21,
+          "bound_candidate_id": 42,
+          "skeleton_candidate_id": 23,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 22,
+          "bound_candidate_id": 44,
+          "skeleton_candidate_id": 24,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        },
+        {
+          "idx": 23,
+          "bound_candidate_id": 46,
+          "skeleton_candidate_id": 25,
+          "total_cost": 0.1,
+          "rows": 1.0,
+          "bindings": "[slot0->alt0]"
+        }
+      ],
+      "planner_min_candidate_idx": 0,
+      "planner_min_runtime": {
+        "returncode": 0,
+        "stderr": [
+          "NOTICE:  Athena root candidate count: 24",
+          "NOTICE:  Athena forced bound candidate idx: 0"
+        ],
+        "planning_time_ms": 2.306,
+        "execution_time_ms": 0.077
+      },
+      "oracle_candidates_evaluated": [
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 0"
+          ],
+          "planning_time_ms": 1.766,
+          "execution_time_ms": 0.063,
+          "idx": 0,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 1"
+          ],
+          "planning_time_ms": 1.67,
+          "execution_time_ms": 0.063,
+          "idx": 1,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 2"
+          ],
+          "planning_time_ms": 1.798,
+          "execution_time_ms": 0.066,
+          "idx": 2,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 3"
+          ],
+          "planning_time_ms": 1.769,
+          "execution_time_ms": 0.066,
+          "idx": 3,
+          "planner_total_cost": 0.1
+        },
+        {
+          "returncode": 0,
+          "stderr": [
+            "NOTICE:  Athena root candidate count: 24",
+            "NOTICE:  Athena forced bound candidate idx: 4"
+          ],
+          "planning_time_ms": 1.701,
+          "execution_time_ms": 0.06,
+          "idx": 4,
+          "planner_total_cost": 0.1
+        }
+      ],
+      "oracle_candidate_idx": 4,
+      "oracle_runtime": {
+        "returncode": 0,
+        "stderr": [
+          "NOTICE:  Athena root candidate count: 24",
+          "NOTICE:  Athena forced bound candidate idx: 4"
+        ],
+        "planning_time_ms": 1.701,
+        "execution_time_ms": 0.06,
+        "idx": 4,
+        "planner_total_cost": 0.1
+      },
+      "summary": {
+        "default_minus_oracle_ms": 0.031,
+        "planner_min_minus_oracle_ms": 0.017
+      }
+    }
+  ],
+  "summary": {
+    "query_count": 1,
+    "oracle_better_than_default_count": 1,
+    "default_not_worse_than_oracle_count": 0,
+    "planner_min_equal_oracle_count": 0
+  }
+}
