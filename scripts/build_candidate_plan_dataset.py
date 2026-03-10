@@ -133,6 +133,19 @@ def run_command(argv, *, input_text=None, timeout=None, check=True):
     )
 
 
+def terminate_database_backends(args):
+    sql = (
+        "select pg_terminate_backend(pid) "
+        "from pg_stat_activity "
+        f"where datname = '{args.database}' and pid <> pg_backend_pid();\n"
+    )
+    run_command(
+        psql_argv(args.pg_bin_dir, args.host, args.port, args.user, "postgres"),
+        input_text=sql,
+        check=False,
+    )
+
+
 def normalize_query_text(sql_text):
     sql_text = sql_text.strip()
     if sql_text.endswith(";"):
@@ -140,14 +153,16 @@ def normalize_query_text(sql_text):
     return sql_text
 
 
-def run_explain_json(args, sql_text, *, force_idx):
-    timeout_seconds = max(10, args.statement_timeout_ms / 1000.0 + 5.0)
+def run_explain_json(args, sql_text, *, candidate):
+    timeout_seconds = max(4, args.statement_timeout_ms / 1000.0 + 1.0)
     sql = "\n".join(
         [
             f"set statement_timeout = {args.statement_timeout_ms};",
             "set client_min_messages = notice;",
             "set enable_join_order_plans = on;",
-            f"set athena_force_bound_candidate_idx = {force_idx};",
+            f"set athena_force_bound_candidate_idx = {candidate.get('local_idx', candidate['idx'])};",
+            "set athena_disable_simple_from_subquery_pullup = "
+            + ("on;" if candidate.get("representation_mode") == "no_pullup" else "off;"),
             f"explain (format json) {normalize_query_text(sql_text)};",
         ]
     ) + "\n"
@@ -272,17 +287,168 @@ def plan_to_candidate_dict(candidate_idx, candidate_meta, explain_obj):
         "planner_candidate_rows": candidate_meta.get("rows"),
         "skeleton_candidate_id": candidate_meta.get("skeleton_candidate_id"),
         "bound_candidate_id": candidate_meta.get("bound_candidate_id"),
+        "representation_mode": candidate_meta.get("representation_mode", "flattened"),
+        "local_idx": candidate_meta.get("local_idx", candidate_idx),
+        "is_default_baseline": candidate_meta.get("is_default_baseline", False),
+        "is_exact_default_baseline": candidate_meta.get("is_exact_default_baseline", False),
     }
+
+
+def serialized_candidate_dict(candidate_idx, candidate_meta):
+    candidate_dict = dict(candidate_meta.get("serialized_plan", {}))
+    candidate_dict["candidate_id"] = candidate_idx
+    candidate_dict["bindings"] = candidate_meta.get("bindings", "")
+    candidate_dict["planner_candidate_cost"] = candidate_meta.get("total_cost")
+    candidate_dict["planner_candidate_rows"] = candidate_meta.get("rows")
+    candidate_dict["skeleton_candidate_id"] = candidate_meta.get("skeleton_candidate_id")
+    candidate_dict["bound_candidate_id"] = candidate_meta.get("bound_candidate_id")
+    candidate_dict["representation_mode"] = candidate_meta.get("representation_mode", "flattened")
+    candidate_dict["local_idx"] = candidate_meta.get("local_idx", candidate_idx)
+    candidate_dict["is_default_baseline"] = candidate_meta.get("is_default_baseline", False)
+    candidate_dict["is_exact_default_baseline"] = candidate_meta.get("is_exact_default_baseline", False)
+    return candidate_dict
+
+
+def candidate_binding_key(candidate):
+    return (candidate.get("representation_mode", "flattened"), candidate.get("bindings") or "")
+
+
+def candidate_skeleton_key(candidate):
+    return (candidate.get("representation_mode", "flattened"),
+            candidate.get("skeleton_candidate_id"))
+
+
+def candidate_plan_signature(candidate):
+    serialized = candidate.get("serialized_plan")
+    if serialized is not None:
+        return json.dumps(serialized, sort_keys=True)
+    return json.dumps(
+        {
+            "representation_mode": candidate.get("representation_mode", "flattened"),
+            "bindings": candidate.get("bindings", ""),
+            "skeleton_candidate_id": candidate.get("skeleton_candidate_id"),
+            "total_cost": candidate.get("total_cost"),
+        },
+        sort_keys=True,
+    )
+
+
+def candidate_is_sorted_merge_friendly(candidate):
+    serialized = candidate.get("serialized_plan") or {}
+    root_join_tree = serialized.get("root_join_tree", "")
+    join_methods = serialized.get("join_methods") or []
+    other_ops = set(serialized.get("other_operators") or [])
+    return (
+        root_join_tree.startswith("Merge Join")
+        or any(method.startswith("Merge Join:") for method in join_methods)
+        or "Sort" in other_ops
+        or "Gather Merge" in other_ops
+        or "Incremental Sort" in other_ops
+    )
+
+
+def select_binding_aware_candidates(candidates, limit, *, preselected=None):
+    if limit <= 0:
+        return sorted(candidates, key=lambda row: (row["total_cost"], row["idx"]))
+
+    ordered = sorted(candidates, key=lambda row: (row["total_cost"], row["idx"]))
+    selected = list(preselected or [])
+    selected_ids = {candidate["idx"] for candidate in selected}
+    selected_skeletons = {candidate_skeleton_key(candidate) for candidate in selected}
+    selected_signatures = {candidate_plan_signature(candidate) for candidate in selected}
+
+    def add_candidate(candidate):
+        if (
+            candidate["idx"] in selected_ids
+            or len(selected) >= limit
+            or candidate_plan_signature(candidate) in selected_signatures
+        ):
+            return False
+        selected.append(candidate)
+        selected_ids.add(candidate["idx"])
+        selected_skeletons.add(candidate_skeleton_key(candidate))
+        selected_signatures.add(candidate_plan_signature(candidate))
+        return True
+
+    by_binding = {}
+    for candidate in ordered:
+        by_binding.setdefault(candidate_binding_key(candidate), []).append(candidate)
+
+    for binding_key in sorted(
+        by_binding,
+        key=lambda key: (by_binding[key][0]["total_cost"], by_binding[key][0]["idx"]),
+    ):
+        preferred = None
+        for candidate in by_binding[binding_key]:
+            if candidate_skeleton_key(candidate) not in selected_skeletons:
+                preferred = candidate
+                break
+        if preferred is None:
+            preferred = by_binding[binding_key][0]
+        add_candidate(preferred)
+
+    if len(selected) < limit:
+        cheapest_by_skeleton = {}
+        for candidate in ordered:
+            cheapest_by_skeleton.setdefault(candidate_skeleton_key(candidate), candidate)
+        for candidate in sorted(
+            cheapest_by_skeleton.values(),
+            key=lambda row: (row["total_cost"], row["idx"]),
+        ):
+            add_candidate(candidate)
+
+    if len(selected) < limit:
+        for candidate in ordered:
+            add_candidate(candidate)
+
+    return sorted(selected, key=lambda row: row["idx"])
 
 
 def select_candidates(bound_candidates, label_candidate_id, max_candidates_per_query):
     selected = list(bound_candidates)
+    protected_default = next((row for row in bound_candidates if row.get("is_default_baseline")), None)
     if max_candidates_per_query > 0 and len(selected) > max_candidates_per_query:
-        selected = sorted(selected, key=lambda row: (row["total_cost"], row["idx"]))[:max_candidates_per_query]
-        if label_candidate_id is not None and not any(row["idx"] == label_candidate_id for row in selected):
-            label_row = next((row for row in bound_candidates if row["idx"] == label_candidate_id), None)
-            if label_row is not None:
-                selected.append(label_row)
+        label_row = next((row for row in bound_candidates if row["idx"] == label_candidate_id), None)
+        protected = []
+        if protected_default is not None:
+            protected.append(protected_default)
+        if label_row is not None and all(row["idx"] != label_row["idx"] for row in protected):
+            protected.append(label_row)
+
+        remaining = [
+            row
+            for row in sorted(bound_candidates, key=lambda row: (row["total_cost"], row["idx"]))
+            if row["idx"] not in {candidate["idx"] for candidate in protected}
+        ]
+
+        selected = list(protected)
+
+        def add_first_match(candidates):
+            nonlocal selected
+            result = select_binding_aware_candidates(
+                candidates,
+                max_candidates_per_query,
+                preselected=selected,
+            )
+            if len(result) > len(selected):
+                selected = result
+
+        if len(selected) < max_candidates_per_query:
+            add_first_match(remaining[:1])
+
+        if len(selected) < max_candidates_per_query:
+            sorted_merge_candidates = [
+                candidate for candidate in remaining if candidate_is_sorted_merge_friendly(candidate)
+            ]
+            add_first_match(sorted_merge_candidates[:1])
+
+        if len(selected) < max_candidates_per_query:
+            selected = select_binding_aware_candidates(
+                remaining,
+                max_candidates_per_query,
+                preselected=selected,
+            )
+
     return sorted(selected, key=lambda row: row["idx"])
 
 
@@ -332,16 +498,25 @@ def main():
             if candidate.get("execution_time_ms") is not None
         }
 
+        terminate_database_backends(args)
         for position, candidate in enumerate(selected_candidates):
-            proc = run_explain_json(args, sql_text, force_idx=candidate["idx"])
-            if proc.returncode != 0:
-                continue
+            if "serialized_plan" in candidate:
+                candidate_dict = serialized_candidate_dict(candidate["idx"], candidate)
+            else:
+                try:
+                    proc = run_explain_json(args, sql_text, candidate=candidate)
+                except subprocess.TimeoutExpired:
+                    terminate_database_backends(args)
+                    continue
+                if proc.returncode != 0:
+                    terminate_database_backends(args)
+                    continue
 
-            explain_obj = parse_explain_json_output(proc.stdout)
-            if explain_obj is None or "Plan" not in explain_obj:
-                continue
+                explain_obj = parse_explain_json_output(proc.stdout)
+                if explain_obj is None or "Plan" not in explain_obj:
+                    continue
 
-            candidate_dict = plan_to_candidate_dict(candidate["idx"], candidate, explain_obj)
+                candidate_dict = plan_to_candidate_dict(candidate["idx"], candidate, explain_obj)
             if candidate["idx"] in runtime_by_id:
                 candidate_dict["execution_time_ms"] = runtime_by_id[candidate["idx"]]
             serialized_candidates.append(candidate_dict)
@@ -375,6 +550,7 @@ def main():
                 "bound_candidate_count": row.get("bound_candidate_count"),
             }
         )
+        terminate_database_backends(args)
 
     output_path = Path(args.output_json)
     output_path.parent.mkdir(parents=True, exist_ok=True)

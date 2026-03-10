@@ -370,6 +370,10 @@ Deliverable:
 - implementation artifacts:
   - `scripts/evaluate_bound_candidate_oracle.py`
   - valid-query / oracle-eligible subset extraction for nested-query workloads
+  - repeated-measurement median runtime collection via `--repetitions`
+  - synthetic V1 nested-query generation and filtering via:
+    - `scripts/generate_job_v1_nested_queries.py`
+    - `scripts/filter_subquery_scan_queries.py`
 
 Done when:
 
@@ -395,6 +399,8 @@ Deliverable:
 - `candidate_plans` JSON records ready for selector training/inference
 - implementation artifact:
   - `scripts/build_candidate_plan_dataset.py`
+  - backend-native plan summaries emitted from
+    `src/backend/optimizer/athena/serialize.c`
 
 Done when:
 
@@ -418,6 +424,10 @@ Likely local touchpoints:
 Deliverable:
 
 - a selector that consumes completed candidates instead of hint strings
+- implementation artifacts:
+  - `LLMOpt/LLM_training/utils/plan_prompt_utils.py`
+  - `LLMOpt/LLM_training/utils/load_sft_dataset.py`
+  - `LLMOpt/LLM_training/inference_vllm.py`
 
 Done when:
 
@@ -608,3 +618,170 @@ This order minimizes wasted work because it verifies candidate quality before in
 If the project needs a single operational sentence, it is:
 
 Port Athena's top-level order-centric exploration to PostgreSQL 18, keep subquery alternatives local, assemble only a bounded set of completed plans after exploration, execute the chosen completed plan by direct path selection, and use LLMOpt only as a reranker over those completed plans.
+
+## 9. Current Status
+
+Implemented and checked:
+
+- Step 1 through Step 8 on PostgreSQL 18.1
+- Step 9 oracle evaluation infrastructure, including repeated median measurement and backend cleanup
+- Step 10 dataset generation from `candidate_plans`, with backend-native bound-candidate summaries
+- Step 11 prompt/data-path adaptation in `LLMOpt`
+- Step 12 cheap selector baselines
+- a protected default-baseline candidate is now injected into the bound-candidate set and preserved by the oracle / dataset builders
+- `athena_max_distinct_bindings_per_skeleton` now allows more than one binding-distinct completion per skeleton; this directly targets the previous collapse to a single subquery-binding profile
+- `make check-world` passes on the PG18.1 fork after the Athena changes
+- synthetic nested-query evaluation now runs on both the 50-query and 195-query generated JOB V1 workloads
+- the 195-query synthetic run currently yields:
+  - `oracle_eligible_count = 195`
+  - `oracle_better_than_default_count = 189`
+  - `planner_min_equal_oracle_count = 119`
+- remaining `Agg` / `Opaque` hotspots have been reduced substantially by adding blueprint support for:
+  - `Agg`
+  - `UpperUnique`
+  - `Limit`
+  - `IncrementalSort`
+- loss analysis on `tmp/oracle_generated_job_v1_195q_real_imdb_v4.json` shows that the 39 real-data non-improving queries are concentrated in a few `title_*` families and, before the new binding-retention change, every one of them collapsed to exactly one non-default binding profile
+- on a targeted 4-query loss subset, increasing `athena_max_distinct_bindings_per_skeleton` from `1` to `2` flipped 3 queries from default-wins to oracle-wins while increasing per-query bound-candidate counts from roughly `14-18` to `27-35`
+- however, a partial real-data rerun on the first 71 queries shows that naive `binding=2` is not uniformly better: it flips 7 old losses to wins, but also flips 10 old wins to losses, indicating that extra binding variants can crowd out other good candidates under the current cost-top-`K` oracle truncation
+- the oracle / dataset builders now use a binding-aware top-`K` truncation policy: protected default, then cheapest-per-binding with skeleton spreading, then cheapest-per-skeleton, then cost-fill
+- on a 17-query real-data probe subset that mixed the 7 naive-`binding=2` wins and 10 naive-`binding=2` regressions, binding-aware truncation improved the result to `12/17` oracle wins versus `10/17` for the original `binding=1` and `7/17` for naive `binding=2`
+- a full 195-query real-data rerun with `athena_max_distinct_bindings_per_skeleton = 2` and binding-aware top-`K` truncation now completes successfully:
+  - oracle report: `tmp/oracle_generated_job_v1_195q_real_imdb_bind2_aware_v1.json`
+  - `oracle_eligible_count = 175`
+  - `oracle_better_than_default_count = 148`
+  - `default_not_worse_than_oracle_count = 27`
+  - `planner_min_equal_oracle_count = 71`
+- compared with the previous real-data `v4` run, the new policy improves the headline oracle win count from `137/176` to `148/175`
+- the downstream dataset and cheap baselines have been regenerated for the new policy:
+  - dataset: `tmp/candidate_plans_generated_job_v1_195q_real_imdb_bind2_aware_v1.json`
+  - baselines: `tmp/candidate_plan_baselines_generated_job_v1_195q_real_imdb_bind2_aware_v1.json`
+  - `planner_cost_min_accuracy = 0.4057`
+  - `structure_first_accuracy = 0.3543`
+- a restricted dual-representation path for simple `FROM`-subqueries is now implemented as a practical two-mode collection strategy:
+  - new GUC: `athena_disable_simple_from_subquery_pullup`
+  - planner-prep change in `prepjointree.c`: eligible simple `FROM`-subqueries can now be kept unflattened instead of always being pulled up
+  - evaluator change: `evaluate_bound_candidate_oracle.py --athena-dual-simple-from-subqueries` collects both `flattened` and `no_pullup` candidates and merges them into one candidate set with `representation_mode` and `local_idx`
+  - dataset builder preserves the same representation metadata
+  - smoke artifact: `tmp/oracle_dual_smoke_v1.json`
+  - smoke result on a simple IMDB `FROM`-subquery shows distinct per-mode frontiers:
+    - `root_candidate_count_by_mode = {'flattened': 3, 'no_pullup': 2}`
+    - `bound_candidate_count_by_mode = {'flattened': 4, 'no_pullup': 3}`
+    - merged candidates include both `Merge Join(t, movie_keyword)` and `Merge Join(t, mk)` / `Nested Loop(mk, t)` style roots
+- a full 195-query real-data rerun with the new dual-representation mode has also been completed:
+  - oracle report: `tmp/oracle_generated_job_v1_195q_real_imdb_dualrepr_v1.json`
+  - dataset: `tmp/candidate_plans_generated_job_v1_195q_real_imdb_dualrepr_v1.json`
+  - baselines: `tmp/candidate_plan_baselines_generated_job_v1_195q_real_imdb_dualrepr_v1.json`
+  - `oracle_eligible_count = 157`
+  - `oracle_better_than_default_count = 129`
+  - `default_not_worse_than_oracle_count = 28`
+  - `planner_min_equal_oracle_count = 35`
+  - `planner_cost_min_accuracy = 0.2229`
+  - `structure_first_accuracy = 0.2420`
+- compared with the current best single-representation binding-aware run (`bind2_aware_v1`), the first dual-representation version is not yet a win:
+  - single-representation binding-aware: `148/175`
+  - dual representation v1: `129/157`
+  - among queries comparable in both runs, dual representation flips `12` old losses to wins but also flips `15` old wins to losses
+  - the main issue is candidate crowding: the merged `flattened` and `no_pullup` frontiers roughly double per-query candidate counts, but the downstream oracle / prompt budget is still fixed
+- the oracle / dataset selection policy has now been updated again for the single-representation path:
+  - exact PostgreSQL baseline is materialized from an explicit `enable_join_order_plans = off` run and injected as a synthetic protected candidate
+  - candidate budgeting now treats `K` as the total budget and uses:
+    - exact default baseline
+    - cheapest non-default
+    - best sorted / merge-friendly non-default
+    - remaining slots filled by binding-aware cost selection
+  - this has been wired into both `evaluate_bound_candidate_oracle.py` and `build_candidate_plan_dataset.py`
+- a 39-query real-data loss-focused subset run with `K = 5` confirms the intended effect:
+  - oracle report: `tmp/oracle_default_loss_subset_bind2_k5_exactdefault_v1.json`
+  - `oracle_eligible_count = 36`
+  - `oracle_better_than_default_count = 22`
+  - `default_not_worse_than_oracle_count = 14`
+  - crucially, all remaining `14` losses are now exact-default ties rather than strict regressions, i.e. `oracle == exact_default` for all of them
+- a full 195-query real-data rerun with the same `K = 5` exact-default policy now completes successfully:
+  - oracle report: `tmp/oracle_generated_job_v1_195q_real_imdb_bind2_k5_exactdefault_v1.json`
+  - dataset: `tmp/candidate_plans_generated_job_v1_195q_real_imdb_bind2_k5_exactdefault_v1.json`
+  - baselines: `tmp/candidate_plan_baselines_generated_job_v1_195q_real_imdb_bind2_k5_exactdefault_v1.json`
+  - `default_runtime_success_count = 177`
+  - `oracle_eligible_count = 177`
+  - `oracle_better_than_default_count = 146`
+  - `default_not_worse_than_oracle_count = 31`
+  - `planner_min_equal_oracle_count = 65`
+  - `planner_cost_min_accuracy = 0.3672`
+  - `structure_first_accuracy = 0.2825`
+  - `oracle_avg_runtime_ms = 5352.58`
+  - importantly, all `31` non-improving cases in this run are exact-default ties; strict regressions are now `0`
+
+Current bottlenecks:
+
+- real-data IMDB evaluation is now in place, but some queries still miss runtime comparison because `statement_timeout = 30000` cuts them off
+- flat JOB analysis found a separate planner-side bottleneck: `24a`-family queries hit the GEQO path (`12` relations, `geqo_threshold = 12`), and `enable_join_order_plans = on` can time out during GEQO initial-pool evaluation even for `EXPLAIN (FORMAT JSON)` with no execution
+- the new phase timing shows that `24a.sql` does **not** reach root-finalize, late-bind, or serialization before timing out; with `geqo = off`, the same Athena-on planner path finishes in about `0.058s`, so the pathological case is GEQO-specific rather than a general late-bind cost
+- Step 13 is code-ready, but the LLM selector has not yet been trained and compared on the new `candidate_plans` datasets
+- late-bind is now side-catalog-driven at the root, but unsupported path kinds can still fall back to node-local `template_path`
+- exact-default baseline injection is now implemented in the evaluator / dataset builders, but the same exact-baseline notion is not yet materialized inside the PostgreSQL-side in-memory candidate catalog itself
+- the new dual-representation path currently merges `flattened` and `no_pullup` candidates outside a single planner invocation; a future step is to integrate the same idea deeper into the in-DB candidate catalog if single-run dual planning becomes necessary
+- more importantly, dual representation now needs a better merged-candidate budget policy; `flattened` and `no_pullup` modes are currently merged with a fixed downstream top-`K`, which causes the new representation mode to crowd out previously strong single-representation candidates
+
+## 10. Real-Data Benchmark Path
+
+Local assets already available:
+
+- IMDB real-data CSVs under `/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/zero-shot/cross_db_benchmark/datasets/imdb`
+- generated nested-query workload under `/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries`
+- PostgreSQL 18.1 install under `/Users/an/Desktop/bachelor/4thyear/2nd_semester/pg18-install-clang`
+
+Recommended real-data path:
+
+1. Load the local IMDB CSVs into a dedicated `imdb_full` database on the PG18.1 Athena fork.
+2. Run `evaluate_bound_candidate_oracle.py` with `--skip-schema-init` against that existing populated database.
+3. Rebuild `candidate_plans` and cheap baselines from the real-data oracle report.
+4. Only after that, move on to LLM training / inference.
+
+Helper entrypoint:
+
+- `scripts/real_imdb_benchmark.py`
+
+What it does:
+
+- detects the current PG18.1 socket / port from `postmaster.pid`
+- verifies local IMDB CSV and workload assets
+- can load `imdb_full` using `psql` / `\\copy` only, without requiring `psycopg2`
+- prints or runs the real-data Step 9 oracle command against the populated database
+
+Immediate next experiment:
+
+- load `imdb_full`
+- run the 195-query generated nested workload against real data
+- compare the resulting real-data oracle summary against the current schema-only synthetic summary
+
+Smoke validation already completed:
+
+- `scripts/real_imdb_benchmark.py --database imdb_full_smoke --load --force-reload --table-limit 1`
+- this successfully created a temporary database and loaded `aka_name` via `\\copy`
+- `scripts/real_imdb_benchmark.py --database imdb_full --load --force-reload`
+- this successfully loaded the full local IMDB dataset into the PG18.1 Athena fork
+- `scripts/real_imdb_benchmark.py --database imdb_full --run-eval --limit 5`
+- this real-data smoke run completed with:
+  - `query_count = 5`
+  - `oracle_eligible_count = 5`
+  - `oracle_better_than_default_count = 4`
+
+Full real-data run now completed:
+
+- output: `tmp/oracle_generated_job_v1_195q_real_imdb_v4.json`
+- summary:
+  - `query_count = 195`
+  - `default_runtime_success_count = 176`
+  - `bound_collection_success_count = 176`
+  - `oracle_eligible_count = 176`
+  - `oracle_better_than_default_count = 137`
+  - `default_not_worse_than_oracle_count = 39`
+  - `planner_min_equal_oracle_count = 84`
+
+Real-data downstream artifacts:
+
+- `tmp/candidate_plans_generated_job_v1_195q_real_imdb_v4.json`
+  - `record_count = 176`
+- `tmp/candidate_plan_baselines_generated_job_v1_195q_real_imdb_v4.json`
+  - `planner_cost_min_accuracy = 0.4773`
+  - `structure_first_accuracy = 0.3807`

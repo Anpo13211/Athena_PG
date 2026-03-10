@@ -1,0 +1,30 @@
+SELECT
+    t.id AS title_id,
+    t.title,
+    t.production_year,
+    cct.kind AS outer_text,
+    cc.subject_id AS outer_num
+FROM
+    title t
+    JOIN complete_cast cc ON cc.movie_id = t.id
+    JOIN comp_cast_type cct ON cct.id = cc.subject_id
+JOIN
+    (
+        SELECT *
+        FROM (
+            SELECT DISTINCT
+                mc2.movie_id AS join_key,
+                cn2.country_code AS payload_text,
+                mc2.company_id AS payload_num
+            FROM movie_companies mc2
+            JOIN company_name cn2 ON cn2.id = mc2.company_id
+            WHERE cn2.country_code IS NOT NULL
+        ) base_subq
+        OFFSET 0
+    ) sq ON sq.join_key = t.id
+WHERE
+    t.kind_id IS NOT NULL
+    AND cct.kind IS NOT NULL
+ORDER BY
+    1, 2
+;

@@ -1,0 +1,1003 @@
+{
+  "summary": {
+    "query_count": 110,
+    "planner_cost_min_accuracy": 0.18181818181818182,
+    "structure_first_accuracy": 0.05454545454545454,
+    "runtime_comparable_queries": 26,
+    "planner_cost_min_avg_runtime_ms": 1263.9231923076925,
+    "structure_first_avg_runtime_ms": 1170.2351538461537,
+    "oracle_avg_runtime_ms": 987.1673846153845
+  },
+  "queries": [
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/10a.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 1009.8,
+      "planner_runtime_ms": 1027.755,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/10b.sql",
+      "oracle_idx": 14,
+      "planner_cost_min_idx": 14,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 969.037,
+      "planner_runtime_ms": 969.037,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/10c.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 1368.057,
+      "planner_runtime_ms": 1561.195,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/11a.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 22,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 217.284,
+      "planner_runtime_ms": 227.441,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/11b.sql",
+      "oracle_idx": 7,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 20,
+      "oracle_runtime_ms": 3702.286,
+      "planner_runtime_ms": 3736.309,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/11c.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 19,
+      "oracle_runtime_ms": 2297.066,
+      "planner_runtime_ms": 2804.362,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/11d.sql",
+      "oracle_idx": 23,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 193.405,
+      "planner_runtime_ms": 303.793,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/12a.sql",
+      "oracle_idx": 22,
+      "planner_cost_min_idx": 22,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 546.968,
+      "planner_runtime_ms": 546.968,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/12b.sql",
+      "oracle_idx": 23,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 443.893,
+      "planner_runtime_ms": 898.28,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/12c.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 22,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 665.872,
+      "planner_runtime_ms": 720.162,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/13a.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 2,
+      "oracle_runtime_ms": 1006.146,
+      "planner_runtime_ms": 1104.533,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/13b.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 841.585,
+      "planner_runtime_ms": 892.544,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/13c.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 810.037,
+      "planner_runtime_ms": 810.037,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/13d.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 867.378,
+      "planner_runtime_ms": 1101.198,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/14a.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 708.663,
+      "planner_runtime_ms": 785.134,
+      "heuristic_runtime_ms": 864.374
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/14b.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 728.15,
+      "planner_runtime_ms": 728.15,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/14c.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 22,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 721.183,
+      "planner_runtime_ms": 1174.75,
+      "heuristic_runtime_ms": 1045.663
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/15a.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 38,
+      "structure_first_idx": 30,
+      "oracle_runtime_ms": 522.47,
+      "planner_runtime_ms": 532.758,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/15b.sql",
+      "oracle_idx": 7,
+      "planner_cost_min_idx": 39,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 425.258,
+      "planner_runtime_ms": 535.781,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/15c.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 38,
+      "structure_first_idx": 19,
+      "oracle_runtime_ms": 518.293,
+      "planner_runtime_ms": 579.227,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/15d.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 38,
+      "structure_first_idx": 19,
+      "oracle_runtime_ms": 542.199,
+      "planner_runtime_ms": 618.128,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/16a.sql",
+      "oracle_idx": 24,
+      "planner_cost_min_idx": 24,
+      "structure_first_idx": 18,
+      "oracle_runtime_ms": 1128.852,
+      "planner_runtime_ms": 1128.852,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/16b.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 25,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 2115.364,
+      "planner_runtime_ms": 3337.246,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/16c.sql",
+      "oracle_idx": 26,
+      "planner_cost_min_idx": 25,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 1570.178,
+      "planner_runtime_ms": 1571.089,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/16d.sql",
+      "oracle_idx": 26,
+      "planner_cost_min_idx": 26,
+      "structure_first_idx": 19,
+      "oracle_runtime_ms": 1510.813,
+      "planner_runtime_ms": 1510.813,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/17a.sql",
+      "oracle_idx": 20,
+      "planner_cost_min_idx": 20,
+      "structure_first_idx": 13,
+      "oracle_runtime_ms": 2935.79,
+      "planner_runtime_ms": 2935.79,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/17b.sql",
+      "oracle_idx": 20,
+      "planner_cost_min_idx": 21,
+      "structure_first_idx": 13,
+      "oracle_runtime_ms": 2759.085,
+      "planner_runtime_ms": 3051.647,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/17c.sql",
+      "oracle_idx": 20,
+      "planner_cost_min_idx": 20,
+      "structure_first_idx": 16,
+      "oracle_runtime_ms": 2001.456,
+      "planner_runtime_ms": 2001.456,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/17d.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 20,
+      "structure_first_idx": 16,
+      "oracle_runtime_ms": 1717.842,
+      "planner_runtime_ms": 2554.145,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/17e.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 22,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 1424.979,
+      "planner_runtime_ms": 2799.153,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/17f.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 21,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 1757.641,
+      "planner_runtime_ms": 2533.539,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/18a.sql",
+      "oracle_idx": 21,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1459.241,
+      "planner_runtime_ms": 1596.909,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/18b.sql",
+      "oracle_idx": 21,
+      "planner_cost_min_idx": 20,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1515.778,
+      "planner_runtime_ms": 1552.128,
+      "heuristic_runtime_ms": 1762.955
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/18c.sql",
+      "oracle_idx": 20,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1790.14,
+      "planner_runtime_ms": 1899.491,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/19a.sql",
+      "oracle_idx": 28,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 21,
+      "oracle_runtime_ms": 1735.881,
+      "planner_runtime_ms": 1754.73,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/19b.sql",
+      "oracle_idx": 29,
+      "planner_cost_min_idx": 28,
+      "structure_first_idx": 20,
+      "oracle_runtime_ms": 1385.64,
+      "planner_runtime_ms": 1389.026,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/19c.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 16,
+      "oracle_runtime_ms": 1567.711,
+      "planner_runtime_ms": 1567.711,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/19d.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 29,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1905.514,
+      "planner_runtime_ms": 4472.092,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/1a.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 157.402,
+      "planner_runtime_ms": 160.72,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/1b.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 121.898,
+      "planner_runtime_ms": 123.307,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/1c.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 132.028,
+      "planner_runtime_ms": 175.635,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/1d.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 123.186,
+      "planner_runtime_ms": 123.186,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/20a.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 1369.877,
+      "planner_runtime_ms": 1384.535,
+      "heuristic_runtime_ms": 1831.655
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/20b.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 1210.582,
+      "planner_runtime_ms": 2238.568,
+      "heuristic_runtime_ms": 1748.156
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/20c.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 23,
+      "oracle_runtime_ms": 1292.635,
+      "planner_runtime_ms": 1310.732,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/21a.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 28,
+      "oracle_runtime_ms": 925.708,
+      "planner_runtime_ms": 925.708,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/21b.sql",
+      "oracle_idx": 15,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 28,
+      "oracle_runtime_ms": 661.118,
+      "planner_runtime_ms": 739.743,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/21c.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 736.398,
+      "planner_runtime_ms": 764.261,
+      "heuristic_runtime_ms": 736.398
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/22a.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 20,
+      "oracle_runtime_ms": 795.867,
+      "planner_runtime_ms": 817.796,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/22b.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 20,
+      "oracle_runtime_ms": 790.745,
+      "planner_runtime_ms": 807.035,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/22c.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 40,
+      "oracle_runtime_ms": 854.038,
+      "planner_runtime_ms": 854.038,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/22d.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 42,
+      "structure_first_idx": 40,
+      "oracle_runtime_ms": 833.082,
+      "planner_runtime_ms": 1355.526,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/23a.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 41,
+      "oracle_runtime_ms": 531.829,
+      "planner_runtime_ms": 2358.248,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/23b.sql",
+      "oracle_idx": 12,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 26,
+      "oracle_runtime_ms": 513.032,
+      "planner_runtime_ms": 4521.508,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/23c.sql",
+      "oracle_idx": 7,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 40,
+      "oracle_runtime_ms": 511.596,
+      "planner_runtime_ms": 515.398,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/24a.sql",
+      "oracle_idx": 46,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 31,
+      "oracle_runtime_ms": 1679.902,
+      "planner_runtime_ms": 1796.998,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/24b.sql",
+      "oracle_idx": 41,
+      "planner_cost_min_idx": 46,
+      "structure_first_idx": 22,
+      "oracle_runtime_ms": 1674.775,
+      "planner_runtime_ms": 1691.227,
+      "heuristic_runtime_ms": 1726.891
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/25a.sql",
+      "oracle_idx": 14,
+      "planner_cost_min_idx": 38,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 1511.03,
+      "planner_runtime_ms": 1675.403,
+      "heuristic_runtime_ms": 1511.03
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/25b.sql",
+      "oracle_idx": 14,
+      "planner_cost_min_idx": 38,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 1487.918,
+      "planner_runtime_ms": 1557.077,
+      "heuristic_runtime_ms": 1487.918
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/25c.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 38,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 1768.365,
+      "planner_runtime_ms": 2455.87,
+      "heuristic_runtime_ms": 1881.369
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/26a.sql",
+      "oracle_idx": 44,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 20,
+      "oracle_runtime_ms": 1199.355,
+      "planner_runtime_ms": 1418.779,
+      "heuristic_runtime_ms": 1284.988
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/26b.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 20,
+      "oracle_runtime_ms": 994.384,
+      "planner_runtime_ms": 994.384,
+      "heuristic_runtime_ms": 1098.459
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/26c.sql",
+      "oracle_idx": 14,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 41,
+      "oracle_runtime_ms": 1339.092,
+      "planner_runtime_ms": 2325.214,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/27a.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 36,
+      "oracle_runtime_ms": 681.223,
+      "planner_runtime_ms": 681.223,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/27b.sql",
+      "oracle_idx": 23,
+      "planner_cost_min_idx": 53,
+      "structure_first_idx": 56,
+      "oracle_runtime_ms": 712.178,
+      "planner_runtime_ms": 748.794,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/27c.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 53,
+      "structure_first_idx": 36,
+      "oracle_runtime_ms": 747.925,
+      "planner_runtime_ms": 751.792,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/28a.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 59,
+      "oracle_runtime_ms": 822.426,
+      "planner_runtime_ms": 822.426,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/28c.sql",
+      "oracle_idx": 52,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 59,
+      "oracle_runtime_ms": 865.06,
+      "planner_runtime_ms": 1061.85,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/29a.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 35,
+      "structure_first_idx": 92,
+      "oracle_runtime_ms": 1774.255,
+      "planner_runtime_ms": 2006.574,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/29b.sql",
+      "oracle_idx": 53,
+      "planner_cost_min_idx": 35,
+      "structure_first_idx": 8,
+      "oracle_runtime_ms": 1299.019,
+      "planner_runtime_ms": 1667.809,
+      "heuristic_runtime_ms": 1905.226
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/2a.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 5,
+      "oracle_runtime_ms": 211.909,
+      "planner_runtime_ms": 306.865,
+      "heuristic_runtime_ms": 254.116
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/2b.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 5,
+      "oracle_runtime_ms": 206.034,
+      "planner_runtime_ms": 311.35,
+      "heuristic_runtime_ms": 252.531
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/2c.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 205.961,
+      "planner_runtime_ms": 205.961,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/2d.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 231.245,
+      "planner_runtime_ms": 332.875,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/30a.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 53,
+      "oracle_runtime_ms": 1591.544,
+      "planner_runtime_ms": 1613.82,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/30c.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 74,
+      "structure_first_idx": 50,
+      "oracle_runtime_ms": 1803.446,
+      "planner_runtime_ms": 2287.332,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/31a.sql",
+      "oracle_idx": 46,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 46,
+      "oracle_runtime_ms": 1733.203,
+      "planner_runtime_ms": 1988.443,
+      "heuristic_runtime_ms": 1733.203
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/31b.sql",
+      "oracle_idx": 58,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 38,
+      "oracle_runtime_ms": 1501.395,
+      "planner_runtime_ms": 1900.859,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/31c.sql",
+      "oracle_idx": 46,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 46,
+      "oracle_runtime_ms": 1920.367,
+      "planner_runtime_ms": 2133.694,
+      "heuristic_runtime_ms": 1920.367
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/32a.sql",
+      "oracle_idx": 12,
+      "planner_cost_min_idx": 13,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 109.573,
+      "planner_runtime_ms": 110.048,
+      "heuristic_runtime_ms": 122.146
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/32b.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 13,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 118.984,
+      "planner_runtime_ms": 131.125,
+      "heuristic_runtime_ms": 122.117
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/33a.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 103,
+      "oracle_runtime_ms": 146.241,
+      "planner_runtime_ms": 146.241,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/33b.sql",
+      "oracle_idx": 5,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 225,
+      "oracle_runtime_ms": 363.853,
+      "planner_runtime_ms": 367.009,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/33c.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 6,
+      "structure_first_idx": 79,
+      "oracle_runtime_ms": 206.54,
+      "planner_runtime_ms": 344.739,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/3a.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 9,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 822.604,
+      "planner_runtime_ms": 822.604,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/3b.sql",
+      "oracle_idx": 5,
+      "planner_cost_min_idx": 9,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 421.209,
+      "planner_runtime_ms": 425.728,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/3c.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 632.025,
+      "planner_runtime_ms": 632.025,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/4a.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 169.138,
+      "planner_runtime_ms": 196.166,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/4b.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 125.099,
+      "planner_runtime_ms": 136.756,
+      "heuristic_runtime_ms": 147.941
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/4c.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 177.906,
+      "planner_runtime_ms": 195.771,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/5a.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 79.559,
+      "planner_runtime_ms": 82.332,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/5b.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 74.995,
+      "planner_runtime_ms": 74.995,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/5c.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 593.213,
+      "planner_runtime_ms": 600.65,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/6a.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 893.75,
+      "planner_runtime_ms": 946.754,
+      "heuristic_runtime_ms": 946.754
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/6b.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 989.179,
+      "planner_runtime_ms": 992.667,
+      "heuristic_runtime_ms": 992.667
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/6c.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 903.761,
+      "planner_runtime_ms": 940.23,
+      "heuristic_runtime_ms": 940.23
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/6d.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 1300.919,
+      "planner_runtime_ms": 1835.192,
+      "heuristic_runtime_ms": 2405.478
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/6e.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 904.131,
+      "planner_runtime_ms": 954.924,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/6f.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 1320.175,
+      "planner_runtime_ms": 1829.691,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/7a.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 5,
+      "oracle_runtime_ms": 845.197,
+      "planner_runtime_ms": 2731.703,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/7b.sql",
+      "oracle_idx": 15,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 106.654,
+      "planner_runtime_ms": 2773.878,
+      "heuristic_runtime_ms": 853.889
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/7c.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 24,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1206.29,
+      "planner_runtime_ms": 2418.08,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/8a.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 848.075,
+      "planner_runtime_ms": 864.572,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/8b.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 0,
+      "oracle_runtime_ms": 849.593,
+      "planner_runtime_ms": 895.076,
+      "heuristic_runtime_ms": 849.593
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/8c.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 18,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 1946.601,
+      "planner_runtime_ms": 2500.905,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/8d.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 18,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 1758.802,
+      "planner_runtime_ms": 1893.758,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/9a.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1137.77,
+      "planner_runtime_ms": 1154.547,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/9b.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 889.319,
+      "planner_runtime_ms": 924.524,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/9c.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 16,
+      "oracle_runtime_ms": 1215.495,
+      "planner_runtime_ms": 1226.504,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/thesis/test/DACE/SQLStorm/benchmark/benchmarks/job/queries/9d.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 19,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 1514.041,
+      "planner_runtime_ms": 1742.141,
+      "heuristic_runtime_ms": null
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "database": "imdb_full",
+  "queries_dir": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/dual_smoke_queries",
+  "schema_json": "",
+  "skip_schema_init": true,
+  "statement_timeout_ms": 30000,
+  "max_oracle_candidates": 3,
+  "athena_max_distinct_bindings_per_skeleton": 1,
+  "athena_dual_simple_from_subqueries": true,
+  "queries": [
+    {
+      "query_name": "simple_from_subquery.sql",
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/dual_smoke_queries/simple_from_subquery.sql",
+      "default_runtime": {
+        "returncode": 0,
+        "stderr": [],
+        "planning_time_ms": 0.447,
+        "execution_time_ms": 242.569,
+        "planning_time_runs_ms": [
+          0.447
+        ],
+        "execution_time_runs_ms": [
+          242.569
+        ]
+      },
+      "root_candidate_count": 5,
+      "bound_candidate_count": 7,
+      "root_candidate_count_by_mode": {
+        "flattened": 3,
+        "no_pullup": 2
+      },
+      "bound_candidate_count_by_mode": {
+        "flattened": 4,
+        "no_pullup": 3
+      },
+      "bound_candidates": [
+        {
+          "idx": 0,
+          "local_idx": 0,
+          "bound_candidate_id": 0,
+          "skeleton_candidate_id": 0,
+          "is_default_baseline": false,
+          "total_cost": 155172.87,
+          "rows": 97528.0,
+          "bindings": "[]",
+          "representation_mode": "flattened",
+          "serialized_plan": {
+            "is_default_baseline": false,
+            "startup_cost": 66877.281025741,
+            "total_cost": 155172.874836377,
+            "est_rows": 97528,
+            "plan_width": 0,
+            "root_join_tree": "Merge Join(t, movie_keyword)",
+            "scan_methods": [
+              "t: Index Only Scan",
+              "movie_keyword: Seq Scan"
+            ],
+            "join_methods": [
+              "Merge Join: Merge Join(t, movie_keyword)"
+            ],
+            "subqueries": [],
+            "other_operators": [
+              "Gather"
+            ]
+          }
+        },
+        {
+          "idx": 1,
+          "local_idx": 1,
+          "bound_candidate_id": 1,
+          "skeleton_candidate_id": 1,
+          "is_default_baseline": false,
+          "total_cost": 112309.69,
+          "rows": 97528.0,
+          "bindings": "[]",
+          "representation_mode": "flattened",
+          "serialized_plan": {
+            "is_default_baseline": false,
+            "startup_cost": 1000.4425,
+            "total_cost": 112309.688194312,
+            "est_rows": 97528,
+            "plan_width": 0,
+            "root_join_tree": "Nested Loop(movie_keyword, t)",
+            "scan_methods": [
+              "movie_keyword: Seq Scan",
+              "t: Index Only Scan"
+            ],
+            "join_methods": [
+              "Nested Loop: Nested Loop(movie_keyword, t)"
+            ],
+            "subqueries": [],
+            "other_operators": [
+              "Gather",
+              "Memoize"
+            ]
+          }
+        },
+        {
+          "idx": 2,
+          "local_idx": 2,
+          "bound_candidate_id": 2,
+          "skeleton_candidate_id": 2,
+          "is_default_baseline": false,
+          "total_cost": 134543.88,
+          "rows": 97528.0,
+          "bindings": "[]",
+          "representation_mode": "flattened",
+          "serialized_plan": {
+            "is_default_baseline": false,
+            "startup_cost": 0.4425,
+            "total_cost": 134543.877777646,
+            "est_rows": 97528,
+            "plan_width": 0,
+            "root_join_tree": "Nested Loop(movie_keyword, t)",
+            "scan_methods": [
+              "movie_keyword: Seq Scan",
+              "t: Index Only Scan"
+            ],
+            "join_methods": [
+              "Nested Loop: Nested Loop(movie_keyword, t)"
+            ],
+            "subqueries": [],
+            "other_operators": [
+              "Memoize"
+            ]
+          }
+        },
+        {
+          "idx": 3,
+          "local_idx": 3,
+          "bound_candidate_id": 3,
+          "skeleton_candidate_id": -1,
+          "is_default_baseline": true,
+          "total_cost": 82454.06,
+          "rows": 1.0,
+          "bindings": "[]",
+          "representation_mode": "flattened",
+          "serialized_plan": {
+            "is_default_baseline": true,
+            "startup_cost": 82454.0494832924,
+            "total_cost": 82454.0594832924,
+            "est_rows": 1,
+            "plan_width": 8,
+            "root_join_tree": "Nested Loop(movie_keyword, t)",
+            "scan_methods": [
+              "movie_keyword: Seq Scan",
+              "t: Index Only Scan"
+            ],
+            "join_methods": [
+              "Nested Loop: Nested Loop(movie_keyword, t)"
+            ],
+            "subqueries": [],
+            "other_operators": [
+              "Aggregate",
+              "Gather"
+            ]
+          }
+        },
+        {
+          "idx": 4,
+          "local_idx": 0,
+          "bound_candidate_id": 0,
+          "skeleton_candidate_id": 2,
+          "is_default_baseline": false,
+          "total_cost": 148710.3,
+          "rows": 97528.0,
+          "bindings": "[slot0->alt0]",
+          "representation_mode": "no_pullup",
+          "serialized_plan": {
+            "is_default_baseline": false,
+            "startup_cost": 66978.873525741,
+            "total_cost": 148710.304836377,
+            "est_rows": 97528,
+            "plan_width": 0,
+            "root_join_tree": "Merge Join(t, mk)",
+            "scan_methods": [
+              "t: Index Only Scan",
+              "t: Seq Scan"
+            ],
+            "join_methods": [
+              "Merge Join: Merge Join(t, mk)"
+            ],
+            "subqueries": [
+              "mk: est_rows=97528, join_tree=t"
+            ],
+            "other_operators": [
+              "Gather",
+              "Result"
+            ]
+          }
+        },
+        {
+          "idx": 5,
+          "local_idx": 1,
+          "bound_candidate_id": 2,
+          "skeleton_candidate_id": 3,
+          "is_default_baseline": false,
+          "total_cost": 138597.08,
+          "rows": 97528.0,
+          "bindings": "[slot0->alt0]",
+          "representation_mode": "no_pullup",
+          "serialized_plan": {
+            "is_default_baseline": false,
+            "startup_cost": 1000.43,
+            "total_cost": 138597.082314583,
+            "est_rows": 97528,
+            "plan_width": 0,
+            "root_join_tree": "Nested Loop(mk, t)",
+            "scan_methods": [
+              "t: Seq Scan",
+              "t: Index Only Scan"
+            ],
+            "join_methods": [
+              "Nested Loop: Nested Loop(mk, t)"
+            ],
+            "subqueries": [
+              "mk: est_rows=97528, join_tree=t"
+            ],
+            "other_operators": [
+              "Gather",
+              "Result"
+            ]
+          }
+        },
+        {
+          "idx": 6,
+          "local_idx": 2,
+          "bound_candidate_id": 4,
+          "skeleton_candidate_id": -1,
+          "is_default_baseline": false,
+          "total_cost": 82454.06,
+          "rows": 1.0,
+          "bindings": "[]",
+          "representation_mode": "no_pullup",
+          "serialized_plan": {
+            "is_default_baseline": true,
+            "startup_cost": 82454.0494832924,
+            "total_cost": 82454.0594832924,
+            "est_rows": 1,
+            "plan_width": 8,
+            "root_join_tree": "Nested Loop(mk, t)",
+            "scan_methods": [
+              "t: Seq Scan",
+              "t: Index Only Scan"
+            ],
+            "join_methods": [
+              "Nested Loop: Nested Loop(mk, t)"
+            ],
+            "subqueries": [
+              "mk: est_rows=40637, join_tree=t"
+            ],
+            "other_operators": [
+              "Aggregate",
+              "Gather",
+              "Result"
+            ]
+          }
+        }
+      ],
+      "default_runtime_success": true,
+      "bound_collection_success": true,
+      "oracle_eligible": true,
+      "planner_min_candidate_idx": 3,
+      "planner_min_runtime": {
+        "returncode": 0,
+        "stderr": [],
+        "planning_time_ms": 0.42,
+        "execution_time_ms": 129.362,
+        "planning_time_runs_ms": [
+          0.42
+        ],
+        "execution_time_runs_ms": [
+          129.362
+        ]
+      },
+      "oracle_candidates_evaluated": [
+        {
+          "returncode": 124,
+          "stderr": [
+            "psql timeout during EXPLAIN ANALYZE"
+          ],
+          "planning_time_ms": null,
+          "execution_time_ms": null,
+          "planning_time_runs_ms": [],
+          "execution_time_runs_ms": [],
+          "idx": 1,
+          "planner_total_cost": 112309.69
+        },
+        {
+          "returncode": 0,
+          "stderr": [],
+          "planning_time_ms": 0.42,
+          "execution_time_ms": 129.362,
+          "planning_time_runs_ms": [
+            0.42
+          ],
+          "execution_time_runs_ms": [
+            129.362
+          ],
+          "idx": 3,
+          "planner_total_cost": 82454.06
+        },
+        {
+          "returncode": 124,
+          "stderr": [
+            "psql timeout during EXPLAIN ANALYZE"
+          ],
+          "planning_time_ms": null,
+          "execution_time_ms": null,
+          "planning_time_runs_ms": [],
+          "execution_time_runs_ms": [],
+          "idx": 5,
+          "planner_total_cost": 138597.08
+        },
+        {
+          "returncode": 0,
+          "stderr": [],
+          "planning_time_ms": 0.5,
+          "execution_time_ms": 122.483,
+          "planning_time_runs_ms": [
+            0.5
+          ],
+          "execution_time_runs_ms": [
+            122.483
+          ],
+          "idx": 6,
+          "planner_total_cost": 82454.06
+        }
+      ],
+      "oracle_candidate_idx": 6,
+      "oracle_runtime": {
+        "returncode": 0,
+        "stderr": [],
+        "planning_time_ms": 0.5,
+        "execution_time_ms": 122.483,
+        "planning_time_runs_ms": [
+          0.5
+        ],
+        "execution_time_runs_ms": [
+          122.483
+        ],
+        "idx": 6,
+        "planner_total_cost": 82454.06
+      },
+      "summary": {
+        "default_minus_oracle_ms": 120.08599999999998,
+        "planner_min_minus_oracle_ms": 6.878999999999991
+      }
+    }
+  ],
+  "summary": {
+    "query_count": 1,
+    "default_runtime_success_count": 1,
+    "bound_collection_success_count": 1,
+    "oracle_eligible_count": 1,
+    "oracle_better_than_default_count": 1,
+    "default_not_worse_than_oracle_count": 0,
+    "planner_min_equal_oracle_count": 0
+  }
+}

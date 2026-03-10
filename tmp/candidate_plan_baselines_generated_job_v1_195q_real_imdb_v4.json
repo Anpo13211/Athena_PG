@@ -1,0 +1,1597 @@
+{
+  "summary": {
+    "query_count": 176,
+    "planner_cost_min_accuracy": 0.4772727272727273,
+    "structure_first_accuracy": 0.3806818181818182,
+    "runtime_comparable_queries": 142,
+    "planner_cost_min_avg_runtime_ms": 7288.369908450706,
+    "structure_first_avg_runtime_ms": 7384.491359154931,
+    "oracle_avg_runtime_ms": 6715.450253521127
+  },
+  "queries": [
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0001_aka_name_outer_person_info_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 1149.112,
+      "planner_runtime_ms": 1229.206,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0002_aka_name_outer_person_info_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 5,
+      "oracle_runtime_ms": 15.737,
+      "planner_runtime_ms": 15.737,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0003_aka_name_outer_person_info_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 1132.464,
+      "planner_runtime_ms": 1132.464,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0007_aka_name_outer_aka_name_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 9,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 19.985,
+      "planner_runtime_ms": 20.485,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0008_aka_name_outer_aka_name_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 9,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 16.051,
+      "planner_runtime_ms": 19.805,
+      "heuristic_runtime_ms": 19.805
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0009_aka_name_outer_aka_name_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 9,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 19.838,
+      "planner_runtime_ms": 20.33,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0010_aka_name_outer_cast_title_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 5958.681,
+      "planner_runtime_ms": 6440.052,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0011_aka_name_outer_cast_title_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 17.233,
+      "planner_runtime_ms": 17.233,
+      "heuristic_runtime_ms": 80.769
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0012_aka_name_outer_cast_title_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 5748.952,
+      "planner_runtime_ms": 5748.952,
+      "heuristic_runtime_ms": 7370.699
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0013_person_info_outer_person_info_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 3808.594,
+      "planner_runtime_ms": 3808.594,
+      "heuristic_runtime_ms": 3808.594
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0014_person_info_outer_person_info_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 61.663,
+      "planner_runtime_ms": 61.663,
+      "heuristic_runtime_ms": 62.426
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0015_person_info_outer_person_info_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 2613.742,
+      "planner_runtime_ms": 2613.742,
+      "heuristic_runtime_ms": 2613.742
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0019_person_info_outer_aka_name_distinct.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 150.466,
+      "planner_runtime_ms": 154.086,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0020_person_info_outer_aka_name_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 8,
+      "oracle_runtime_ms": 151.26,
+      "planner_runtime_ms": 151.26,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0021_person_info_outer_aka_name_distinct.sql",
+      "oracle_idx": 7,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 149.837,
+      "planner_runtime_ms": 150.477,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0023_person_info_outer_cast_title_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 62.906,
+      "planner_runtime_ms": 63.75,
+      "heuristic_runtime_ms": 62.906
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0024_person_info_outer_cast_title_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 9361.974,
+      "planner_runtime_ms": 9361.974,
+      "heuristic_runtime_ms": 9361.974
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0025_cast_info_outer_person_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 9,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 8243.806,
+      "planner_runtime_ms": 20437.682,
+      "heuristic_runtime_ms": 20437.682
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0026_cast_info_outer_person_info_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 62.115,
+      "planner_runtime_ms": 724.86,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0027_cast_info_outer_person_info_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 9,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 3986.835,
+      "planner_runtime_ms": 15758.145,
+      "heuristic_runtime_ms": 15758.145
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0031_cast_info_outer_aka_name_distinct.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 0,
+      "oracle_runtime_ms": 1399.859,
+      "planner_runtime_ms": 1435.764,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0032_cast_info_outer_aka_name_distinct.sql",
+      "oracle_idx": 5,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 61.68,
+      "planner_runtime_ms": 76.712,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0033_cast_info_outer_aka_name_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 0,
+      "oracle_runtime_ms": 1401.932,
+      "planner_runtime_ms": 1401.932,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/person_0035_cast_info_outer_cast_title_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 61.814,
+      "planner_runtime_ms": 62.657,
+      "heuristic_runtime_ms": 61.814
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0001_company_outer_mc_country_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 3066.747,
+      "planner_runtime_ms": 3150.092,
+      "heuristic_runtime_ms": 3150.092
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0002_company_outer_mc_country_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 3060.158,
+      "planner_runtime_ms": 3222.322,
+      "heuristic_runtime_ms": 3222.322
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0003_company_outer_mc_country_distinct.sql",
+      "oracle_idx": 12,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 3744.826,
+      "planner_runtime_ms": 3790.135,
+      "heuristic_runtime_ms": 3790.135
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0004_company_outer_mc_country_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 44.898,
+      "planner_runtime_ms": 45.885,
+      "heuristic_runtime_ms": 44.898
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0009_company_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 12,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 5195.74,
+      "planner_runtime_ms": 5217.389,
+      "heuristic_runtime_ms": 5217.389
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0010_company_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 5173.139,
+      "planner_runtime_ms": 5465.758,
+      "heuristic_runtime_ms": 5465.758
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0011_company_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 6690.483,
+      "planner_runtime_ms": 6968.454,
+      "heuristic_runtime_ms": 6968.454
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0012_company_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.059,
+      "planner_runtime_ms": 45.059,
+      "heuristic_runtime_ms": 45.594
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0013_company_outer_mi_info_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 8460.456,
+      "planner_runtime_ms": 9868.919,
+      "heuristic_runtime_ms": 9868.919
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0014_company_outer_mi_info_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 8550.809,
+      "planner_runtime_ms": 9594.957,
+      "heuristic_runtime_ms": 9594.957
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0015_company_outer_mi_info_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 9927.022,
+      "planner_runtime_ms": 12287.355,
+      "heuristic_runtime_ms": 12287.355
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0016_company_outer_mi_info_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.043,
+      "planner_runtime_ms": 45.626,
+      "heuristic_runtime_ms": 45.043
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0017_company_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 25972.418,
+      "planner_runtime_ms": 29372.814,
+      "heuristic_runtime_ms": 29372.814
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0020_company_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 46.877,
+      "planner_runtime_ms": 318.448,
+      "heuristic_runtime_ms": 309.904
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0021_company_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 14018.099,
+      "planner_runtime_ms": 15914.255,
+      "heuristic_runtime_ms": 15914.255
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0022_company_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 14615.194,
+      "planner_runtime_ms": 15700.449,
+      "heuristic_runtime_ms": 15700.449
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0023_company_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 15543.471,
+      "planner_runtime_ms": 18157.031,
+      "heuristic_runtime_ms": 18157.031
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0024_company_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.657,
+      "planner_runtime_ms": 45.856,
+      "heuristic_runtime_ms": 46.143
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0025_company_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 480.744,
+      "planner_runtime_ms": 480.744,
+      "heuristic_runtime_ms": 503.098
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0026_company_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 476.19,
+      "planner_runtime_ms": 476.19,
+      "heuristic_runtime_ms": 510.867
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0027_company_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 201.177,
+      "planner_runtime_ms": 201.177,
+      "heuristic_runtime_ms": 237.834
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0028_company_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 47.293,
+      "planner_runtime_ms": 47.293,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0029_company_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 579.533,
+      "planner_runtime_ms": 579.533,
+      "heuristic_runtime_ms": 579.533
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0030_company_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 606.114,
+      "planner_runtime_ms": 606.114,
+      "heuristic_runtime_ms": 893.741
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0031_company_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 1002.319,
+      "planner_runtime_ms": 1002.319,
+      "heuristic_runtime_ms": 1002.319
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0032_company_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 47.651,
+      "planner_runtime_ms": 76.8,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0033_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 14,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 15222.475,
+      "planner_runtime_ms": 16905.941,
+      "heuristic_runtime_ms": 16905.941
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0034_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 14,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 15225.609,
+      "planner_runtime_ms": 17178.312,
+      "heuristic_runtime_ms": 17178.312
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0035_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 13,
+      "planner_cost_min_idx": 16,
+      "structure_first_idx": 16,
+      "oracle_runtime_ms": 17001.165,
+      "planner_runtime_ms": 18579.8,
+      "heuristic_runtime_ms": 18579.8
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0036_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.474,
+      "planner_runtime_ms": 762.621,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0041_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 14,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 20860.973,
+      "planner_runtime_ms": 21791.647,
+      "heuristic_runtime_ms": 21791.647
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0042_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 14,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 21381.523,
+      "planner_runtime_ms": 22756.276,
+      "heuristic_runtime_ms": 22756.276
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0043_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 13,
+      "planner_cost_min_idx": 16,
+      "structure_first_idx": 16,
+      "oracle_runtime_ms": 25746.011,
+      "planner_runtime_ms": 27284.386,
+      "heuristic_runtime_ms": 27284.386
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0044_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 48.651,
+      "planner_runtime_ms": 1399.485,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0045_cast_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 13,
+      "structure_first_idx": 13,
+      "oracle_runtime_ms": 25015.05,
+      "planner_runtime_ms": 26677.591,
+      "heuristic_runtime_ms": 26677.591
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0046_cast_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 13,
+      "structure_first_idx": 13,
+      "oracle_runtime_ms": 25189.488,
+      "planner_runtime_ms": 26504.208,
+      "heuristic_runtime_ms": 26504.208
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0048_cast_outer_mi_info_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.83,
+      "planner_runtime_ms": 46.163,
+      "heuristic_runtime_ms": 45.83
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0052_cast_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 46.845,
+      "planner_runtime_ms": 46.845,
+      "heuristic_runtime_ms": 48.745
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0056_cast_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.917,
+      "planner_runtime_ms": 46.29,
+      "heuristic_runtime_ms": 45.917
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0057_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 2313.853,
+      "planner_runtime_ms": 2313.853,
+      "heuristic_runtime_ms": 2875.175
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0058_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 2315.547,
+      "planner_runtime_ms": 2315.547,
+      "heuristic_runtime_ms": 2882.602
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0059_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 2301.017,
+      "planner_runtime_ms": 2301.017,
+      "heuristic_runtime_ms": 2977.361
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0060_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 5,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 44.536,
+      "planner_runtime_ms": 53.63,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0061_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 3126.738,
+      "planner_runtime_ms": 3126.738,
+      "heuristic_runtime_ms": 8213.038
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0062_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 3696.104,
+      "planner_runtime_ms": 3696.104,
+      "heuristic_runtime_ms": 8412.669
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0063_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 16,
+      "oracle_runtime_ms": 7417.353,
+      "planner_runtime_ms": 7417.353,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0064_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 72.198,
+      "planner_runtime_ms": 72.198,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0065_keyword_outer_mc_country_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 4184.66,
+      "planner_runtime_ms": 4184.66,
+      "heuristic_runtime_ms": 4184.66
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0066_keyword_outer_mc_country_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 4555.893,
+      "planner_runtime_ms": 4555.893,
+      "heuristic_runtime_ms": 4555.893
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0067_keyword_outer_mc_country_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 5252.089,
+      "planner_runtime_ms": 5252.089,
+      "heuristic_runtime_ms": 5252.089
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0068_keyword_outer_mc_country_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.877,
+      "planner_runtime_ms": 48.377,
+      "heuristic_runtime_ms": 45.877
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0073_keyword_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 11503.283,
+      "planner_runtime_ms": 11503.283,
+      "heuristic_runtime_ms": 11503.283
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0074_keyword_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 13013.003,
+      "planner_runtime_ms": 13013.003,
+      "heuristic_runtime_ms": 13013.003
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0075_keyword_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 19060.206,
+      "planner_runtime_ms": 19060.206,
+      "heuristic_runtime_ms": 19060.206
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0076_keyword_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 47.321,
+      "planner_runtime_ms": 49.406,
+      "heuristic_runtime_ms": 47.321
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0077_keyword_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 10708.287,
+      "planner_runtime_ms": 10708.287,
+      "heuristic_runtime_ms": 10708.287
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0078_keyword_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 11015.267,
+      "planner_runtime_ms": 11015.267,
+      "heuristic_runtime_ms": 11015.267
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0079_keyword_outer_mi_info_distinct.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 13526.536,
+      "planner_runtime_ms": 13810.939,
+      "heuristic_runtime_ms": 13810.939
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0080_keyword_outer_mi_info_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 45.043,
+      "planner_runtime_ms": 46.879,
+      "heuristic_runtime_ms": 45.043
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0084_keyword_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 45.572,
+      "planner_runtime_ms": 46.11,
+      "heuristic_runtime_ms": 45.631
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0085_keyword_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 17742.22,
+      "planner_runtime_ms": 17742.22,
+      "heuristic_runtime_ms": 17742.22
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0086_keyword_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 18142.498,
+      "planner_runtime_ms": 18142.498,
+      "heuristic_runtime_ms": 18142.498
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0087_keyword_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 21714.47,
+      "planner_runtime_ms": 21714.47,
+      "heuristic_runtime_ms": 21714.47
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0088_keyword_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 47.083,
+      "planner_runtime_ms": 47.633,
+      "heuristic_runtime_ms": 47.083
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0089_keyword_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 561.681,
+      "planner_runtime_ms": 561.681,
+      "heuristic_runtime_ms": 561.681
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0090_keyword_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 568.49,
+      "planner_runtime_ms": 568.49,
+      "heuristic_runtime_ms": 568.49
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0091_keyword_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 315.376,
+      "planner_runtime_ms": 315.376,
+      "heuristic_runtime_ms": 315.376
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0092_keyword_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 49.115,
+      "planner_runtime_ms": 57.832,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0093_keyword_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 13,
+      "structure_first_idx": 13,
+      "oracle_runtime_ms": 747.344,
+      "planner_runtime_ms": 1305.309,
+      "heuristic_runtime_ms": 1305.309
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0094_keyword_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 13,
+      "structure_first_idx": 13,
+      "oracle_runtime_ms": 894.329,
+      "planner_runtime_ms": 1370.594,
+      "heuristic_runtime_ms": 1370.594
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0095_keyword_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 15,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 1513.853,
+      "planner_runtime_ms": 1872.258,
+      "heuristic_runtime_ms": 1872.258
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0096_keyword_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 6,
+      "oracle_runtime_ms": 75.403,
+      "planner_runtime_ms": 75.403,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0097_info_outer_mc_country_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 3572.982,
+      "planner_runtime_ms": 6878.062,
+      "heuristic_runtime_ms": 6878.062
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0098_info_outer_mc_country_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 3719.016,
+      "planner_runtime_ms": 7073.713,
+      "heuristic_runtime_ms": 7073.713
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0099_info_outer_mc_country_distinct.sql",
+      "oracle_idx": 12,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 8914.558,
+      "planner_runtime_ms": 8914.558,
+      "heuristic_runtime_ms": 8914.558
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0100_info_outer_mc_country_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 759.971,
+      "planner_runtime_ms": 767.798,
+      "heuristic_runtime_ms": 759.971
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0105_info_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 12971.26,
+      "planner_runtime_ms": 12971.26,
+      "heuristic_runtime_ms": 12971.26
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0106_info_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 15590.168,
+      "planner_runtime_ms": 15590.168,
+      "heuristic_runtime_ms": 15590.168
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0107_info_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 12,
+      "planner_cost_min_idx": 12,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 19809.439,
+      "planner_runtime_ms": 19809.439,
+      "heuristic_runtime_ms": 19809.439
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0108_info_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 45.35,
+      "planner_runtime_ms": 45.35,
+      "heuristic_runtime_ms": 45.411
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0109_info_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 15202.486,
+      "planner_runtime_ms": 15202.486,
+      "heuristic_runtime_ms": 15202.486
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0110_info_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 15725.211,
+      "planner_runtime_ms": 15725.211,
+      "heuristic_runtime_ms": 15725.211
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0111_info_outer_mi_info_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 20194.555,
+      "planner_runtime_ms": 20194.555,
+      "heuristic_runtime_ms": 20194.555
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0112_info_outer_mi_info_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 45.704,
+      "planner_runtime_ms": 45.704,
+      "heuristic_runtime_ms": 45.846
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0116_info_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 47.497,
+      "planner_runtime_ms": 47.844,
+      "heuristic_runtime_ms": 47.497
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0117_info_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 22260.937,
+      "planner_runtime_ms": 22260.937,
+      "heuristic_runtime_ms": 22260.937
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0118_info_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 22593.874,
+      "planner_runtime_ms": 22593.874,
+      "heuristic_runtime_ms": 22593.874
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0120_info_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 45.27,
+      "planner_runtime_ms": 45.967,
+      "heuristic_runtime_ms": 45.472
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0121_info_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 1079.318,
+      "planner_runtime_ms": 1079.318,
+      "heuristic_runtime_ms": 1079.318
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0122_info_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 1075.182,
+      "planner_runtime_ms": 1075.182,
+      "heuristic_runtime_ms": 1075.182
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0123_info_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 875.799,
+      "planner_runtime_ms": 875.799,
+      "heuristic_runtime_ms": 875.799
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0124_info_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 57.483,
+      "planner_runtime_ms": 60.59,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0125_info_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 1384.031,
+      "planner_runtime_ms": 1384.031,
+      "heuristic_runtime_ms": 1384.031
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0126_info_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 1433.346,
+      "planner_runtime_ms": 1433.346,
+      "heuristic_runtime_ms": 1433.346
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0127_info_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 4,
+      "oracle_runtime_ms": 2659.597,
+      "planner_runtime_ms": 2659.597,
+      "heuristic_runtime_ms": 2659.597
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0128_info_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 12,
+      "oracle_runtime_ms": 76.642,
+      "planner_runtime_ms": 76.642,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0129_link_outer_mc_country_distinct.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 1422.257,
+      "planner_runtime_ms": 1966.689,
+      "heuristic_runtime_ms": 1966.689
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0130_link_outer_mc_country_distinct.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 1444.242,
+      "planner_runtime_ms": 1929.289,
+      "heuristic_runtime_ms": 1929.289
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0131_link_outer_mc_country_distinct.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 1430.379,
+      "planner_runtime_ms": 2265.02,
+      "heuristic_runtime_ms": 2265.02
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0132_link_outer_mc_country_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 9.521,
+      "planner_runtime_ms": 10.751,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0137_link_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 3440.229,
+      "planner_runtime_ms": 3440.229,
+      "heuristic_runtime_ms": 3440.229
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0138_link_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 3530.848,
+      "planner_runtime_ms": 3535.237,
+      "heuristic_runtime_ms": 3535.237
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0139_link_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 9,
+      "planner_cost_min_idx": 11,
+      "structure_first_idx": 11,
+      "oracle_runtime_ms": 2914.502,
+      "planner_runtime_ms": 4067.459,
+      "heuristic_runtime_ms": 4067.459
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0140_link_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 8,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 47.108,
+      "planner_runtime_ms": 48.303,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0141_link_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 8018.977,
+      "planner_runtime_ms": 8018.977,
+      "heuristic_runtime_ms": 8018.977
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0142_link_outer_mi_info_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 8279.777,
+      "planner_runtime_ms": 8279.777,
+      "heuristic_runtime_ms": 8279.777
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0143_link_outer_mi_info_distinct.sql",
+      "oracle_idx": 7,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 8,
+      "oracle_runtime_ms": 6889.918,
+      "planner_runtime_ms": 8838.02,
+      "heuristic_runtime_ms": 8838.02
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0144_link_outer_mi_info_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 46.002,
+      "planner_runtime_ms": 46.002,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0145_link_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 26339.445,
+      "planner_runtime_ms": 26339.445,
+      "heuristic_runtime_ms": 26339.445
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0146_link_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 26904.118,
+      "planner_runtime_ms": 26904.118,
+      "heuristic_runtime_ms": 26904.118
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0147_link_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 7,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 8,
+      "oracle_runtime_ms": 23034.441,
+      "planner_runtime_ms": 29296.786,
+      "heuristic_runtime_ms": 29296.786
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0148_link_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 4,
+      "planner_cost_min_idx": 7,
+      "structure_first_idx": 8,
+      "oracle_runtime_ms": 45.874,
+      "planner_runtime_ms": 46.523,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0149_link_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 13608.764,
+      "planner_runtime_ms": 13608.764,
+      "heuristic_runtime_ms": 13608.764
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0150_link_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 13831.6,
+      "planner_runtime_ms": 14644.152,
+      "heuristic_runtime_ms": 14644.152
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0151_link_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 7,
+      "planner_cost_min_idx": 8,
+      "structure_first_idx": 8,
+      "oracle_runtime_ms": 12310.09,
+      "planner_runtime_ms": 14890.331,
+      "heuristic_runtime_ms": 14890.331
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0152_link_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 5,
+      "planner_cost_min_idx": 4,
+      "structure_first_idx": 9,
+      "oracle_runtime_ms": 46.066,
+      "planner_runtime_ms": 47.791,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0153_link_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 87.992,
+      "planner_runtime_ms": 93.939,
+      "heuristic_runtime_ms": 93.939
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0154_link_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 93.169,
+      "planner_runtime_ms": 106.837,
+      "heuristic_runtime_ms": 106.837
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0155_link_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 153.276,
+      "planner_runtime_ms": 153.276,
+      "heuristic_runtime_ms": 153.276
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0156_link_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 9.422,
+      "planner_runtime_ms": 17.297,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0157_link_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 103.049,
+      "planner_runtime_ms": 106.18,
+      "heuristic_runtime_ms": 106.18
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0158_link_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 104.49,
+      "planner_runtime_ms": 109.047,
+      "heuristic_runtime_ms": 109.047
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0159_link_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 10,
+      "planner_cost_min_idx": 10,
+      "structure_first_idx": 10,
+      "oracle_runtime_ms": 101.459,
+      "planner_runtime_ms": 101.459,
+      "heuristic_runtime_ms": 101.459
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0160_link_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 14,
+      "oracle_runtime_ms": 38.99,
+      "planner_runtime_ms": 38.99,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0161_complete_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1301.386,
+      "planner_runtime_ms": 1317.194,
+      "heuristic_runtime_ms": 1317.194
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0162_complete_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1314.011,
+      "planner_runtime_ms": 1314.011,
+      "heuristic_runtime_ms": 1314.011
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0163_complete_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 1461.818,
+      "planner_runtime_ms": 1461.818,
+      "heuristic_runtime_ms": 1461.818
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0164_complete_cast_outer_mc_country_distinct.sql",
+      "oracle_idx": 11,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 15,
+      "oracle_runtime_ms": 46.995,
+      "planner_runtime_ms": 47.589,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0169_complete_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 2430.542,
+      "planner_runtime_ms": 2430.542,
+      "heuristic_runtime_ms": 2430.542
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0170_complete_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 2643.264,
+      "planner_runtime_ms": 2645.143,
+      "heuristic_runtime_ms": 2645.143
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0171_complete_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 2948.425,
+      "planner_runtime_ms": 2948.425,
+      "heuristic_runtime_ms": 2948.425
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0172_complete_cast_outer_mk_keyword_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 60.394,
+      "planner_runtime_ms": 60.394,
+      "heuristic_runtime_ms": 60.394
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0173_complete_cast_outer_mi_info_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 5750.273,
+      "planner_runtime_ms": 5820.77,
+      "heuristic_runtime_ms": 5820.77
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0174_complete_cast_outer_mi_info_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 5831.679,
+      "planner_runtime_ms": 5831.679,
+      "heuristic_runtime_ms": 5831.679
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0175_complete_cast_outer_mi_info_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 6999.62,
+      "planner_runtime_ms": 8204.14,
+      "heuristic_runtime_ms": 8204.14
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0176_complete_cast_outer_mi_info_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 57.684,
+      "planner_runtime_ms": 59.675,
+      "heuristic_runtime_ms": 59.675
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0177_complete_cast_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 20272.905,
+      "planner_runtime_ms": 20272.905,
+      "heuristic_runtime_ms": 20272.905
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0178_complete_cast_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 20727.256,
+      "planner_runtime_ms": 20942.604,
+      "heuristic_runtime_ms": 20942.604
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0179_complete_cast_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 24565.691,
+      "planner_runtime_ms": 27587.99,
+      "heuristic_runtime_ms": 27587.99
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0180_complete_cast_outer_ci_aka_name_distinct.sql",
+      "oracle_idx": 6,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 61.094,
+      "planner_runtime_ms": 62.464,
+      "heuristic_runtime_ms": 62.464
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0181_complete_cast_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 11813.321,
+      "planner_runtime_ms": 11813.321,
+      "heuristic_runtime_ms": 11813.321
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0182_complete_cast_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 11958.221,
+      "planner_runtime_ms": 11958.221,
+      "heuristic_runtime_ms": 11958.221
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0183_complete_cast_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 12176.984,
+      "planner_runtime_ms": 15017.294,
+      "heuristic_runtime_ms": 15017.294
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0184_complete_cast_outer_ci_char_name_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 58.478,
+      "planner_runtime_ms": 58.478,
+      "heuristic_runtime_ms": 58.478
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0185_complete_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 5,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 92.997,
+      "planner_runtime_ms": 93.369,
+      "heuristic_runtime_ms": 93.369
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0186_complete_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 95.863,
+      "planner_runtime_ms": 95.863,
+      "heuristic_runtime_ms": 95.863
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0187_complete_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 3,
+      "structure_first_idx": 3,
+      "oracle_runtime_ms": 100.927,
+      "planner_runtime_ms": 100.927,
+      "heuristic_runtime_ms": 100.927
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0188_complete_cast_outer_ml_link_type_distinct.sql",
+      "oracle_idx": 0,
+      "planner_cost_min_idx": 0,
+      "structure_first_idx": 7,
+      "oracle_runtime_ms": 45.735,
+      "planner_runtime_ms": 45.735,
+      "heuristic_runtime_ms": null
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0189_complete_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 143.295,
+      "planner_runtime_ms": 144.899,
+      "heuristic_runtime_ms": 144.899
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0190_complete_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 3,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 151.562,
+      "planner_runtime_ms": 153.043,
+      "heuristic_runtime_ms": 153.043
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0191_complete_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 1,
+      "planner_cost_min_idx": 1,
+      "structure_first_idx": 1,
+      "oracle_runtime_ms": 167.404,
+      "planner_runtime_ms": 167.404,
+      "heuristic_runtime_ms": 167.404
+    },
+    {
+      "path": "/Users/an/Desktop/bachelor/4thyear/2nd_semester/Athena_PG/tmp/generated_job_v1_subqueryscan_queries/title_0192_complete_cast_outer_cc_subject_kind_distinct.sql",
+      "oracle_idx": 2,
+      "planner_cost_min_idx": 2,
+      "structure_first_idx": 13,
+      "oracle_runtime_ms": 70.958,
+      "planner_runtime_ms": 70.958,
+      "heuristic_runtime_ms": null
+    }
+  ]
+}
